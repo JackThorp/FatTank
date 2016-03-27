@@ -1,0 +1,172 @@
+@import "colors.less";
+@import "fonts.less";
+@import "variables.less";
+@import "../../node_modules/bootstrap/less/bootstrap.less";
+
+html {
+ height: 100%;
+}
+
+body{
+  margin: 0 auto;
+}
+
+h1 {
+  text-transform: uppercase;
+  font-family: NewsGothicOblique;
+  color: @blue;
+  text-align: center;
+  letter-spacing: 2px;
+  display: inline-block;
+  padding-bottom: 5px;
+  position: relative;
+}
+
+h1:before {
+    content: "";
+    position: absolute;
+    width: 80%;
+    height: 1px;
+    bottom: 0;
+    left: 10%;
+    border-bottom: 1px solid @brown;
+}
+
+
+#bg-wrapper img {
+    width   : 100%;
+    height  : auto;
+    z-index : 1;
+}
+
+#bg-wrapper {
+    z-index  : 1;
+    //position : absolute;
+    top      : 0;
+    left     : 0;
+    right    : 0;
+    bottom   : 0;
+}
+
+img, p {
+    position : relative;
+    z-index  : 2;
+}
+
+.page {
+  height: 1000px;
+  text-align: center;
+}
+
+p {
+  text-align: left;
+}
+
+h3 {
+  font-family: NewsGothicOblique;
+  font-size: 1.2em;
+  font-weight: bold;
+  color: @orange;
+  text-align: left;
+}
+
+#bg-rehearse {
+  background-color: white;
+  top: 100%;
+}
+
+#bg-record {
+  background-color: @gold;
+}
+
+#bg-residents {
+  background-color: @light-grey;
+}
+
+/*
+html { 
+  background: url(/images/frontpic.jpg) no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+*/
+/*
+body, html, main {
+  height: 100%;
+}
+
+.cd-fixed-bg {
+	min-height: 100%;
+	background-size: cover;
+	background-attachment: fixed;
+	background-repeat: no-repeat;
+	background-position: center center;
+}
+ 
+.cd-fixed-bg.cd-bg-studio-yard {
+  background-image: url("/images/frontpic.jpg");
+}
+
+.cd-scrolling-bg {
+  min-height: 100%;
+  background-image: url("/images/frontpic.jpg");
+}
+
+.space-block {
+  height: 200px;
+}
+
+
+
+
+#color{
+    background-image: url('/images/frontpic.jpg');
+    background-repeat: no-repeat;
+    background-attachment: scroll;
+    background-position: 50% 50% ; 
+    background-size: cover;
+    //-moz-background-size: cover;
+    //-o-background-size: cover;
+    //-webkit-background-size: cover;
+    //height: auto;
+    //width: 100%;   
+    //position: absolute;
+    //top: 0px;
+    //left: 0px;
+    //display: block;
+}
+
+#blackwhite{    
+    background: yellow no-repeat 50% 50%; 
+    background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    -webkit-background-size: cover;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 100%;
+    left: 0px;
+    display: block;
+    
+}
+
+#sepia{
+    
+    background: orange no-repeat 50% 50%; 
+    background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    -webkit-background-size: cover;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 200%;
+    left: 0px;
+    display: block;
+     
+    
+}
+*/

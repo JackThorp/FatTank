@@ -1,0 +1,27 @@
+{
+  "name": "fattank_website",
+  "version": "1.0.0",
+  "description": "Website for FatTank studio. ",
+  "main": "gulpfile.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/JackThorp/FatTank.git"
+  },
+  "author": "JackThorp",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/JackThorp/FatTank/issues"
+  },
+  "homepage": "https://github.com/JackThorp/FatTank#readme",
+  "dependencies": {
+    "bootstrap": "^3.3.6",
+    "gulp": "^3.9.1",
+    "gulp-jade": "^1.1.0",
+    "gulp-less": "^3.0.5",
+    "gulp-rename": "^1.2.2",
+    "gulp-serve": "^1.2.0"
+  }
+}
