@@ -4,11 +4,12 @@ var gulp  = require('./gulp')([
     'jade',
     'less',
     'images',
-    'fonts'
+    'fonts',
+    'scripts'
 ]);
 
 
-gulp.task('build', ['jade', 'less', 'images', 'fonts']);
+gulp.task('build', ['jade', 'less', 'images', 'fonts', 'scripts']);
 
 gulp.task('serve', ['build'], serve({
   root: ['dist'],
@@ -18,8 +19,9 @@ gulp.task('serve', ['build'], serve({
 gulp.task('watch', ['build'], function() {
   gulp.watch('./src/jade/*.jade', ['jade']);
   gulp.watch('./src/css/*.less', ['less']);
-  gulp.watch('./src/images/*', ['images']);
+  gulp.watch('./src/images/*.*', ['images']);
   gulp.watch('./src/fonts/*', ['fonts']);
+  gulp.watch('./src/js/*.js', ['scripts']);
 });
 
 gulp.task('default', ['watch', 'serve']);

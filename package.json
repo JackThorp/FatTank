@@ -18,6 +18,7 @@
   "homepage": "https://github.com/JackThorp/FatTank#readme",
   "dependencies": {
     "bootstrap": "^3.3.6",
+    "font-awesome": "^4.5.0",
     "gulp": "^3.9.1",
     "gulp-jade": "^1.1.0",
     "gulp-less": "^3.0.5",

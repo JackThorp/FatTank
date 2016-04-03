@@ -4,16 +4,48 @@ html(lang="en")
     // Change to local. . .
     title FatTank 
     link(rel="stylesheet" href="css/styles.css")
+    link(rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css")
+
+    script(src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js")
+      
+    //- TODO Put at bottom  
+    script(src="js/main.js")
   body
-    //img(src="/images/frontpic.jpg")
-    //.cd-fixed-bg.cd-bg-studio-yard
     .container-fluid
       .row
-        #bg-wrapper
-          img(src='/images/frontpic.jpg')
+        img#landing-img(src='/images/frontpic.jpg')
+        nav#navbar.nav-down
+          #navcontainer
+            
+            //- LOGO
+            a 
+              img(src="/images/Fattank-logovit.png")
+            
+            //- NAV LINKS
+            ul
+              li
+                a(href="#") Start
+              li
+                a(href="#sec-rehearse") Rehearse
+              li
+                a(href="#sec-record") Record
+              li
+                a(href="#sec-residents") Residents
+              li
+                a(href="#") Radio
+              li
+                a(href="#") About
+              li
+                a(href="#") Contact
+            
+            //- FB & Twitter links
+            a
+              i.fa.fa-facebook
+
+
 
       .row
-        .page#bg-rehearse
+        .page#sec-rehearse
           .col-md-6.col-md-offset-3
             h1 rehearse
             h3 List equipment
@@ -21,14 +53,13 @@ html(lang="en")
             p Guitar & Bass amps and a drum kit are also available to use at no extra charge. Bands also have full use of the shower room and kitchen area.
         
       .row
-        .page#bg-record
+        .page#sec-record
           .col-md-8.col-md-offset-2
             h1 record
 
       .row
-        .page#bg-residents
+        .page#sec-residents
           .col-md-10.col-md-offset-1
             h1 residents
-
-    //#sepia
-    //.space-block
+      
+      

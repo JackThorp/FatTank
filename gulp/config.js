@@ -1,7 +1,7 @@
 module.exports.paths = {
 
   js: {
-    src: './src/js/app.js',
+    src: './src/js/main.js',
     dest: './dist/js/',
     watch: ['./src/**/*.js']
   },
