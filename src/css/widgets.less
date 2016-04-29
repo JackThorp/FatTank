@@ -1,11 +1,17 @@
 
+.carousel {
+  margin-top: 5%;
+  margin-bottom: 5%;
+  border-radius: 50%;
+}
+
 // override bootstrap styles
 .carousel-control.left, .carousel-control.right {
   background-image: none;
 }
 
 .carousel-inner .item img {
-  width: 65%;
+  width: 55%;
   height: auto;
   margin: 0 auto;
 }
@@ -17,6 +23,15 @@
 .carousel-control .fa {
   position: absolute;
   top: 50%;
+  //TODO top of chevron is 50. Need to take height into account
+}
+
+.carousel-control.left .fa {
+  left: 60%;
+}
+
+.carousel-control.right .fa {
+  right: 60%;
 }
 
 
