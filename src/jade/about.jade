@@ -7,4 +7,75 @@ block title
   h1 About
 
 block content
+  .row
+    .col-md-8.col-md-offset-2
+      p.
+        Founded by musicians for musicians, Fat Tank is a rehearsal and recording studio situated in Manor House, North London.
+        Offering residency packages and one-off slots as well as recording options at bargain prices, Fat Tank has 
+        summat to suit you; whether you’re looking for regular rehearsal and storage space, a one-off intensive or the full re-
+        cording works, get in touch and come for a gander. With fully-stocked tea and coffee making facilities and a shower to 
+        hose off after a sweaty sesh or gig, Fat Tank’s a sort of home from home for musicians and artistes of all persuasions.
+        The kettle is always on.
 
+  .row
+    .col-md-10.col-md-offset-1
+      .heading
+        h3 Gallery
+
+      #galleryCarouel.carousel.slide(data-ride="carousel")
+       
+        .carousel-inner(role="listbox")
+          .item.active
+            img(src="images/resident-dooks.jpg" alt="Chania")
+          .item
+            img(src="images/resident-3.jpg" alt="Chania")
+          .item
+            img(src="images/resident-4.jpg" alt="Chania")
+          .item
+            img(src="images/resident-4.jpg" alt="Chania")
+          .item
+            img(src="images/resident-4.jpg" alt="Chania")
+          .item
+            img(src="images/resident-4.jpg" alt="Chania")
+          .item
+            img(src="images/resident-4.jpg" alt="Chania")
+          .item
+            img(src="images/resident-4.jpg" alt="Chania")
+          .item
+            img(src="images/resident-4.jpg" alt="Chania")
+          .item
+            img(src="images/resident-4.jpg" alt="Chania")
+          .item
+            img(src="images/resident-4.jpg" alt="Chania")
+
+
+        a.left.carousel-control(href="#galleryCarousel" role="button" data-slide="prev")
+          span.fa.fa-chevron-left.fa-2x(aria-hidden="true")
+            span.sr-only Previous
+
+        a.right.carousel-control(href="#galleryCarousel" role="button" data-slide="next")
+          span.fa.fa-chevron-right.fa-2x(aria-hidden="true")
+            span.sr-only Next
+
+
+
+  .row
+    .col-md-8.col-md-offset-2
+      .heading
+        h3 The team
+      .row
+        .col-xs-6
+          .team-img
+            img.img-circle.img-responsive(src="images/nathan_square.jpg")
+          .team-info
+            h4 Daisy Dooks
+            p.role Founder / Managing Director / Assistant Engineer
+            p dooks@fattankstudio.co.uk
+        .col-xs-6
+          .team-img  
+            img.img-circle.img-responsive(src="images/nathan_square.jpg")
+          .team-info
+            h4 Nathan Coen
+            p.role General Manager / G.T.G (Go To Guy) / Recording Engineer
+            p contact@fattankstudios.co.uk
+            p 07845528341

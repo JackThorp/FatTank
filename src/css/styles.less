@@ -20,12 +20,19 @@ html {
 body{
   margin: 0 auto; // Not sure why this is needed? Center the contect horizontally?
   width: 100%; // Sets width to full width of html, which is width of browser widow.
+  //text-align: center; // Makes the headings center aligned . . .?
 }
 
+.heading {
+  text-align: center;
+}
+
+// H1 - main headings for page sections
 h1 {
   text-transform: uppercase;
   font-family: NewsGothicOblique;
   color: @blue;
+  font-size: 3em;
   text-align: center;
   letter-spacing: 2px;
   display: inline-block;
@@ -54,6 +61,34 @@ h1:before {
 }
 
 
+// H2 - Large orange heading for bandname / footer header / soundcloud link
+h2 { 
+  color: @orange;
+  text-align: center;
+  font-size: 2em;
+}
+/*
+h3:before {
+    content: "";  
+    position: absolute;
+    width: 100%;         // Set width of underline relative to size of heading. 
+    height: 1px;        // Set height of content so border is visible?
+    bottom: 0;          // anchor to bottom rather than top
+    left: 0%;          // Centre the underline
+    border-bottom: 1px solid @black;
+}
+*/
+
+// H3 - red underlined text for sub headings
+h3 {
+  color: @maroon;
+  border-bottom: 1px solid @black;
+  font-size: 1.5em;
+  text-align: center;
+  font-family: NewsGothicOblique;
+  display: inline;
+}
+
 // Makes landing image full width
 #landing-img {
     width   : 100%;
@@ -74,7 +109,7 @@ p {
   text-align: left;
 }
 
-h3 {
+h4 {
   font-family: NewsGothicOblique;
   font-size: 1.2em;
   font-weight: bold;
@@ -82,9 +117,28 @@ h3 {
   text-align: left;
 }
 
+ul.residency-list {
+  list-style-type: circle;
+}
+
 #sec-rehearse {
   background-color: white;
   top: 100%;
+}
+
+@contact-banner-height: 80px;
+
+.rehearse-footer {
+  background-color: @gold;
+  height: @contact-banner-height;
+  font-weight: bold;
+  text-align: center;
+}
+
+.rehearse-footer p {
+  line-height: @contact-banner-height;
+  vertical-align: middle;
+  text-align: center;
 }
 
 #sec-record {
@@ -97,4 +151,17 @@ h3 {
 
 table.residents {
   width: 100%;
+  text-align: center;
+}
+
+.page-content {
+  margin-top: 60px;
+}
+
+.team-info h4, .team-info p {
+  text-align: center;
+}
+
+.team-info p.role {
+  font-weight: bold;
 }
