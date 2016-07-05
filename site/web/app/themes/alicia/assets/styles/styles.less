@@ -1,0 +1,167 @@
+@import "../../node_modules/bootstrap/less/bootstrap.less";
+@import "widgets.less";
+@import "colors.less";
+@import "fonts.less";
+@import "variables.less";
+@import "navbar.less";
+@import "footer.less";
+@import "images.less";
+
+// Block level elements grow to fit content. If height is set on element then the content can overflow. In this case
+// the behaviour is specified by the 'overflow' property with possible values: hidden, visible and auto (scroll)
+// Default overflow property is auto
+// html element has height and width property governed by browser window.
+// http://phrogz.net/css/htmlvsbody.html
+
+html {
+ height: 100%; // Not sure why this is required?
+}
+
+body{
+  margin: 0 auto; // Not sure why this is needed? Center the contect horizontally?
+  width: 100%; // Sets width to full width of html, which is width of browser widow.
+  //text-align: center; // Makes the headings center aligned . . .?
+}
+
+.heading {
+  text-align: center;
+}
+
+// H1 - main headings for page sections
+h1 {
+  text-transform: uppercase;
+  font-family: NewsGothicOblique;
+  color: @blue;
+  font-size: 3em;
+  text-align: center;
+  letter-spacing: 2px;
+  display: inline-block;
+  padding-bottom: 5px;
+  position: relative;
+}
+
+// :before inserts styled content before element.
+// 'positioned' element has any position other than static.
+// position: 
+//      static    - (default) not affected by top,left,right,bottom. Normal flow of page 
+//      relative  - use top,bottom,left,right. Content will not fill space left by adjustment
+//      fixed     - positioned relative (as above) to viewport
+//      absolute  - relative to nearest positioned ancestor
+     
+// Content inserted with before is child of element. 
+// This rule creates a sub-width heading underline.
+h1:before {
+    content: "";  
+    position: absolute;
+    width: 80%;         // Set width of underline relative to size of heading. 
+    height: 1px;        // Set height of content so border is visible?
+    bottom: 0;          // anchor to bottom rather than top
+    left: 10%;          // Centre the underline
+    border-bottom: 1px solid @brown;
+}
+
+
+// H2 - Large orange heading for bandname / footer header / soundcloud link
+h2 { 
+  color: @orange;
+  text-align: center;
+  font-size: 2em;
+}
+/*
+h3:before {
+    content: "";  
+    position: absolute;
+    width: 100%;         // Set width of underline relative to size of heading. 
+    height: 1px;        // Set height of content so border is visible?
+    bottom: 0;          // anchor to bottom rather than top
+    left: 0%;          // Centre the underline
+    border-bottom: 1px solid @black;
+}
+*/
+
+// H3 - red underlined text for sub headings
+h3 {
+  color: @maroon;
+  border-bottom: 1px solid @black;
+  font-size: 1.5em;
+  text-align: center;
+  font-family: NewsGothicOblique;
+  display: inline;
+}
+
+// Makes landing image full width
+#landing-img {
+    width   : 100%;
+    height  : auto;
+    z-index : -1; 
+}
+img, p {
+    position : relative;
+    //z-index  : 2;
+}
+
+.page {
+  height: 1000px;
+  text-align: center;
+}
+
+p {
+  text-align: left;
+}
+
+h4 {
+  font-family: NewsGothicOblique;
+  font-size: 1.2em;
+  font-weight: bold;
+  color: @orange;
+  text-align: left;
+}
+
+ul.residency-list {
+  list-style-type: circle;
+}
+
+#sec-rehearse {
+  background-color: white;
+  top: 100%;
+}
+
+@contact-banner-height: 80px;
+
+.rehearse-footer {
+  background-color: @gold;
+  height: @contact-banner-height;
+  font-weight: bold;
+  text-align: center;
+}
+
+.rehearse-footer p {
+  line-height: @contact-banner-height;
+  vertical-align: middle;
+  text-align: center;
+}
+
+#sec-record {
+  background-color: @gold;
+}
+
+#sec-residents {
+  background-color: @light-grey;
+}
+
+table.residents {
+  width: 100%;
+  text-align: center;
+}
+
+.page-content {
+  margin-top: 60px;
+}
+
+.team-info h4, .team-info p {
+  text-align: center;
+}
+
+.team-info p.role {
+  font-weight: bold;
+}
