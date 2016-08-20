@@ -13,7 +13,7 @@ gulp.task('build', ['jade', 'less', 'images', 'fonts', 'scripts']);
 
 gulp.task('serve', ['build'], serve({
   root: ['dist'],
-  port: 3000
+  port: 3005
 }));
 
 gulp.task('watch', ['build'], function() {

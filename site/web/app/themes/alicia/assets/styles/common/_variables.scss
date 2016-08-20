@@ -5,5 +5,23 @@ $icon-font-path:        "../fonts/";
 $main-sm-columns:       12;
 $sidebar-sm-columns:    4;
 
+$navbar-height: 80px;
+
 // Colors
-$brand-primary:         #27ae60;
+//$brand-primary:         #27ae60;
+
+$light-grey: #ededed;
+$dark-grey: #cecece;
+$gold: #ebdca8;
+$blue: #374483;
+$brown: #b2623a;
+$orange: #b86e49;
+$white: #ffffff;
+$maroon: #82261d;
+$black: #000000;
+
+@font-face {
+	font-family: NewsGothicOblique;
+	src: url('../fonts/NewsGothicOblique.ttf');
+	src: url('../fonts/NewsGothicOblique.ttf')  format('truetype');	
+}

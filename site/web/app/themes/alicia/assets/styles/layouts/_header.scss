@@ -1,0 +1,188 @@
+
+$navbarheight: 80px;
+
+#navbar {
+  position: fixed; // The navbar is positioned relative to the browser window
+  z-index: 9999;   // Give high stack order to place in front of background image
+  transition: top 0.2s ease-in-out; // Transition for hide/show of navbar on scroll
+  height: $navbarheight;
+  //background-color: red;
+  width: 100%;
+}
+
+// navcontainer is nested div within the navbar
+/*
+#navcontainer {
+  height: 100%;
+  position: relative;
+  left: 5%;
+}
+*/
+
+#navbar img {
+  top: 50%;
+  bottom: 50%;
+  transform: translate(0%, -50%); 
+  display: inline;
+  height: 60px;
+  width: auto;
+}
+
+#navbar ul.topnav {
+  list-style-type: none;  // Removes bullets from list
+  position: absolute;     // positioned relative to first positioned (non static) ancestor which here should be the #navbar
+  display: inline;
+  text-align:center;
+  //height: 80px;
+  width: 100%;
+  margin: 0;              // Remove normal list margins
+  padding: 0;             // Remove normal list padding
+  overflow: hidden;
+  background-color: rgba(0,0,0,0.4); // Color must be on list so that the background grows to fit an uncollapsed menu
+}
+
+
+// Add this class to navbar on scroll down
+.nav-up {
+  top: -$navbarheight;
+}
+
+// Add this class on scroll up
+.nav-down {
+  top: 0;
+}
+
+ul.topnav li {display: inline;}
+
+ul.topnav li a {
+  display: inline-block;
+  color: $white;
+  text-align: center;
+  padding: 30px 30px;
+  text-decoration: none;
+  transition: 0.3s;
+  font-size: 17px;
+}
+
+// Change background color of links on hover 
+ul.topnav li a:hover {background-color: rgba(0,0,0,0.2);}
+
+// Hide the list item that contains the link that should open and close the topnav on small screens 
+ul.topnav li.icon {display: none;}
+
+// When the screen is less than 680 pixels wide, hide all list items, except for the first one ("Home"). Show the list item that contains the link to open and close the topnav (li.icon) 
+@media screen and (max-width: 680px) {
+  ul.topnav li:not(:first-child) {display: none;}
+  ul.topnav li.icon {
+    float: right;
+    display: inline-block;
+  }
+}
+
+// The "responsive" class is added to the topnav with JavaScript when the user clicks on the icon. This class makes the topnav look good on small screens 
+@media screen and (max-width: 680px) {
+  ul.topnav.responsive {position: relative;}
+  ul.topnav.responsive li.icon {
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+  ul.topnav.responsive li {
+    float: none;
+    display: inline;
+  }
+  ul.topnav.responsive li a {
+    display: block;
+    text-align: left;
+  }
+}
+
+#navbar ul li:not(:first-child):after { 
+  content: " ";
+  word-spacing: 2em;
+  background-repeat: no-repeat;
+  background-position: 50% 60%;
+  background-image: url('../images/nav-separator.png');
+}
+
+/*
+// OLD NAVBAR
+$navbarheight: 80px;
+
+#navbar {
+  position: fixed; // makes navbar positioned realitve to viewport. Tick.
+  transition: top 0.2s ease-in-out; 
+  width: 100%;    // Want navbar to be full page width.
+  height: $navbarheight;
+  background-color: rgba(0,0,0,0.4);
+  z-index: 9999;
+}
+
+// Add this class to navbar on scroll down
+.nav-up {
+  top: -$navbarheight;
+}
+
+// Add this class on scroll up
+.nav-down {
+  top: 0;
+}
+
+#navcontainer {
+  height: 100%;
+  position: relative;
+  left: 5%;
+}
+
+// Display inline needed for both the ul and li a (see below)
+#navbar ul {
+  color: $white;
+  position: absolute;
+  display: inline;
+  padding-top: 30px;
+  padding-left: 0;
+  text-align: center;
+  overflow: hidden;
+}
+
+
+#navbar ul li:after { 
+  content: " ";
+  word-spacing: 2em;
+  background-repeat: no-repeat;
+  background-position: 50% 60%;
+  background-image: url('../images/nav-separator.png');
+}
+
+#navbar ul li {
+  @media screen and (min-width: 700px) {
+  display: inline;
+  }
+  height: 100%;
+}
+
+
+#navbar li a {
+  //display: block;
+  color: white;
+  padding: 30px 30px;
+  text-decoration: none;
+}
+
+#navbar img {
+  top: 50%;
+  bottom: 50%;
+  transform: translate(0%, -50%); 
+  display: inline;
+  height: 80%;
+  width: auto;
+}
+
+#navbar a i {
+  float: right;
+  position: static;
+  display: inline;
+  z-index: 2;
+  padding: 5px 5px;
+}
+*/

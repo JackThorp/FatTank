@@ -1,15 +1,15 @@
-@footer-height: 200px;
-@footer-content-height: 0.6 * @footer-height; 
+$footer-height: 200px;
+$footer-content-height: 0.6 * $footer-height; 
 
 footer {
-  background: @blue;
-  min-height: @footer-height;
-  color: @white;
+  background: $blue;
+  min-height: $footer-height;
+  color: $white;
   //padding: 10px 0;
 }
 
 footer img {
-  max-height: @footer-content-height; //100px;
+  max-height: $footer-content-height; //100px;
   width: auto;
   display: block;
   margin: 0 auto;
@@ -21,7 +21,7 @@ footer img {
 
 footer ul {
   display: table;
-  min-height: @footer-content-height;
+  min-height: $footer-content-height;
   //padding: 0 0;
   margin: 0;
 }
@@ -43,20 +43,20 @@ footer h3 {
 /*
 //TODO changing input box glow color
 footer {
-  background: @blue;
-  //height: @footer-height;
-  color: @white;
+  background: $blue;
+  //height: $footer-height;
+  color: $white;
 }
 
 footer img {
-  height: 0.6; //@footer-content-height;
+  height: 0.6; //$footer-content-height;
   width: auto;
   display: block;
   margin: 0 auto;
 }
 
 #footer-content {
-  margin: (@footer-height - @footer-content-height) / 2;
+  margin: ($footer-height - $footer-content-height) / 2;
 }
 
 .footer-links {
@@ -65,7 +65,7 @@ footer img {
 
 footer ul {
   display: table;
-  //height: @footer-content-height;
+  //height: $footer-content-height;
   padding: 0 0;
   margin: 0;
 }
