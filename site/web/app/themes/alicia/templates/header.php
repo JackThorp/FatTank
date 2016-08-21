@@ -5,7 +5,6 @@
       <nav id="navbar" class="nav-down">
           <ul class="topnav" id="Topnav">
             <li><a href="#section-start"><img src="<?= get_template_directory_uri(); ?>/dist/images/Fattank-logovit.png"></a></li>
-            <!--<li><a href="#section-start">Start</a></li>-->
             <li><a href="#section-rehearse">Rehearse</a></li>
             <li><a href="#section-record">Record</a></li>
             <li><a href="#section-residents">Residents</a></li>

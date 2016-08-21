@@ -11,3 +11,17 @@
   height: auto;
   margin: 0 auto;
 }
+
+// Makes landing image full width
+#landing-img {
+    width   : 100%;
+    height  : auto;
+    z-index : -1; 
+}
+
+img, p {
+    position : relative;
+    //z-index  : 2;
+}
+
+

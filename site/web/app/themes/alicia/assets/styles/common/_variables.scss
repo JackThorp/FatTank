@@ -23,8 +23,11 @@ $black: #000000;
 $fb-blue: #3a599e;
 $tw-blue: #5ba8da;
 
+// TTF stands for true type fonts
+// font-family is the name assigned to this font i.e. it is a property assigned by us and does not effect the rendering
 @font-face {
 	font-family: NewsGothicOblique;
+  font-stretch: ultra-expanded;
 	src: url('../fonts/NewsGothicOblique.ttf');
 	src: url('../fonts/NewsGothicOblique.ttf')  format('truetype');	
 }

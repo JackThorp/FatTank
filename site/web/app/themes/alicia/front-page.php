@@ -1,3 +1,4 @@
+<!-- SECTION REHEARSE -->
 <div id="section-rehearse" class="container-fluid">
   <div class="row">
     <div class="col-md-8 col-md-offset-2">
@@ -8,7 +9,7 @@
   </div>
   <div class="page-content">
     <div class="row">
-      <div class="col-md-6 col-md-offset-3">
+      <div class="col-md-8 col-md-offset-2">
         <h4>List equipment</h4>
         <p>2 Rehearsal rooms / Mackie SRM450 V3 PA Speakers /Mackie ProFX12 mixer / 4 Mics (sm58) / 4 Mic stands (K&M) / XLRs. </p>
         <p>Guitar & Bass amps and a drum kit are also available to use at no extra charge. Bands also have full use of the shower room and kitchen area.</p>
@@ -28,6 +29,32 @@
           fee may be charged.
           
         </p>
+        <div class="prices-table one">
+          <div class="table-row">
+            <div class="cell">Sessions PCM</div>
+            <div class="cell">Fee</div>
+          </div>
+          <div class="table-row">
+            <div class="cell">12</div>
+            <div class="cell">£450</div>
+          </div>
+          <div class="table-row">
+            <div class="cell">10</div>
+            <div class="cell">£400</div>
+          </div>
+          <div class="table-row">
+            <div class="cell">8</div>
+            <div class="cell">£340</div>
+          </div>
+          <div class="table-row">
+            <div class="cell">6</div>
+            <div class="cell">£275</div>
+          </div>
+          <div class="table-row">
+            <div class="cell">4</div>
+            <div class="cell">£200</div>
+          </div>
+        </div>    
         <p>
           You’ll be given access to the online calendar, allowing you to book and alter slots yourself,
           no need to phone and no cancellation fee.
@@ -54,6 +81,8 @@
     </div>
   </div>
 </div>
+
+<!-- SECTION CONTACT FOOTER -->
 <div class="container-fluid">
   <div class="row">
     <div class="rehearse-footer">
@@ -63,6 +92,8 @@
     </div>
   </div>
 </div>
+
+<!-- SECTION RECORD -->
 <div id="section-record" class="container-fluid">
   <div class="row">
     <div class="col-md-8 col-md-offset-2">
@@ -110,6 +141,8 @@
     </div>
   </div>
 </div>
+
+<!-- SECTION RESIDENTS -->
 <div id="section-residents" class="container-fluid">
   <div class="row">
     <div class="col-md-8 col-md-offset-2">

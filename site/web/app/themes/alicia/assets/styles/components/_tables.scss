@@ -1,0 +1,28 @@
+.prices-table {
+  width:100%;
+  display:table;
+  text-align: center;
+  background-image:
+    linear-gradient(to bottom, #283878, #5464a4);
+}
+
+.table-row {
+  display: table-row;
+  height: 50px;
+  width: 100%;
+  border: 1px solid #fff;
+}
+
+.cell {
+  height:50px;
+  width: 80%;
+  margin: 0 auto;
+  vertical-align: middle;
+  color: $white;
+  display:table-cell;
+  border:1px solid #fff;
+}
+/*
+:first-child {
+  width: 80%;  
+}*/
