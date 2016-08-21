@@ -18,53 +18,59 @@
         </div>
         <h4>One-off Slots</h4>
         <p>Non-residency rehearsals are £50 for a day (11am – 6pm) or evening (6pm – 11pm). Simply get in touch at contact@fattankstudios.co.uk to book a time and get playing!</p>
+
         <h4>Residencies</h4>
-        <p>
-          Instead of booking in every week and carting your instruments and amps across town, many
-          bands choose to pay monthly for set rehearsals and storage. If you opt for a residency pack-age, 
-          you’ll be given your own keys to the studio as well as your own personal storage area...
-          meaning there's only one drop off after a gig. Resident bands can also trade two of their ses-sions
-          to book out a full day using the recording studio. This allows you to capture the sound 
-          you’ve been hearing in rehearsals and record your songs on site.* *additional engineering 
-          fee may be charged.
+        <div class="row">
+          <div class="col-xs-12 col-md-8">
+            <p>
+              Instead of booking in every week and carting your instruments and amps across town, many
+              bands choose to pay monthly for set rehearsals and storage. If you opt for a residency pack-age, 
+              you’ll be given your own keys to the studio as well as your own personal storage area...
+              meaning there's only one drop off after a gig. Resident bands can also trade two of their ses-sions
+              to book out a full day using the recording studio. This allows you to capture the sound 
+              you’ve been hearing in rehearsals and record your songs on site.* *additional engineering 
+              fee may be charged.
           
-        </p>
-        <div class="prices-table one">
-          <div class="table-row">
-            <div class="cell">Sessions PCM</div>
-            <div class="cell">Fee</div>
-          </div>
-          <div class="table-row">
-            <div class="cell">12</div>
-            <div class="cell">£450</div>
-          </div>
-          <div class="table-row">
-            <div class="cell">10</div>
-            <div class="cell">£400</div>
-          </div>
-          <div class="table-row">
-            <div class="cell">8</div>
-            <div class="cell">£340</div>
-          </div>
-          <div class="table-row">
-            <div class="cell">6</div>
-            <div class="cell">£275</div>
-          </div>
-          <div class="table-row">
-            <div class="cell">4</div>
-            <div class="cell">£200</div>
-          </div>
-        </div>    
-        <p>
-          You’ll be given access to the online calendar, allowing you to book and alter slots yourself,
-          no need to phone and no cancellation fee.
+            </p>
+            <p>
+              You’ll be given access to the online calendar, allowing you to book and alter slots yourself,
+              no need to phone and no cancellation fee.
           
-        </p>
-        <p>
-          You can choose between DAY (11am - 6pm) or EVENING (6pm – 11pm) slots, bands can chop and change between
-          the two.
-          
-        </p>
+            </p>
+            <p>
+              You can choose between DAY (11am - 6pm) or EVENING (6pm – 11pm) slots, bands can chop and change between
+              the two.
+            </p>
+          </div>
+          <div class="col-xs-12 col-md-4">
+            <div class="prices-table one">
+              <div class="table-row">
+                <div class="cell">Sessions PCM</div>
+                <div class="cell">Fee</div>
+              </div>
+              <div class="table-row">
+                <div class="cell">12</div>
+                <div class="cell">£450</div>
+              </div>
+              <div class="table-row">
+                <div class="cell">10</div>
+                <div class="cell">£400</div>
+              </div>
+              <div class="table-row">
+                <div class="cell">8</div>
+                <div class="cell">£340</div>
+              </div>
+              <div class="table-row">
+                <div class="cell">6</div>
+                <div class="cell">£275</div>
+              </div>
+              <div class="table-row">
+                <div class="cell">4</div>
+                <div class="cell">£200</div>
+              </div>
+            </div>    
+          </div>
+        </div>
         <div class="heading">
           <h3>So to conclude, a Fat Tank Residency gets you:</h3>
         </div>
@@ -83,7 +89,7 @@
 </div>
 
 <!-- SECTION CONTACT FOOTER -->
-<div class="container-fluid">
+<!--<div class="container-fluid">-->
   <div class="row">
     <div class="rehearse-footer">
       <div class="col-xs-12">
@@ -91,7 +97,7 @@
       </div>
     </div>
   </div>
-</div>
+<!--</div> -->
 
 <!-- SECTION RECORD -->
 <div id="section-record" class="container-fluid">
