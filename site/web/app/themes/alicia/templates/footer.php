@@ -1,7 +1,8 @@
+<!--
 <footer>
   <div class="container-fluid">
     <div class="row">
-      <!--.col-sm-1.col-sm-push-3-->
+      //.col-sm-1.col-sm-push-3
       <div class="col-xs-6 col-sm-2 col-sm-push-3">
         <ul class="footer-links">
           <li>Start</li>
@@ -11,7 +12,7 @@
           <li>Radio</li>
         </ul>
       </div>
-      <!--.col-sm-1.col-sm-push-3-->
+      //.col-sm-1.col-sm-push-3
       <div class="col-xs-6 col-sm-2 col-sm-push-3">
         <ul class="footer-links">
           <li>About</li>
@@ -32,3 +33,4 @@
     </div>
   </div>
 </footer>
+-->

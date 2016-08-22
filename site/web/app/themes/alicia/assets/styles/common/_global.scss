@@ -18,6 +18,7 @@ body{
 .heading {
   text-align: center;
   margin-top: 50px;
+  margin-bottom: 50px;
 }
 
 // H1 - main headings for page sections
@@ -31,11 +32,6 @@ h1 {
   display: inline-block;
   padding-bottom: 5px;
   position: relative;
-  transform : scale(1,0.8);
-  -webkit-transform:scale(1,0.8); /* Safari and Chrome */
-  -moz-transform:scale(1,0.8); /* Firefox */
-  -ms-transform:scale(1,0.8); /* IE 9+ */
-  -o-transform:scale(1,0.8); /* Opera */
 }
 
 // :before inserts styled content before element.
@@ -84,6 +80,9 @@ h3 {
   font-size: 1.5em;
   text-align: center;
   font-family: NewsGothicOblique;
+  padding-left: 0.8em;
+  padding-right:0.8em;
+  padding-bottom:0.2em;
   display: inline;
 }
 
@@ -93,19 +92,24 @@ h4 {
   font-weight: bold;
   color: $orange;
   text-align: left;
-  margin-top: 40px;
 }
 
 
 
 // TEXT 
 p {
-  font-family: NewsGothicOblique;
+  font-family: GillSansNovaLight;
   text-align: left;
-  font-weight: 300;
+  font-weight: 200;  // Having no effect?
+  font-size: 1.1em;
+  color: #777;
+  line-height: 1.6em;
+  margin-bottom: 2em;
+  word-spacing: 0.1em;
 }
 
 
+// *** RESIDENCY PAGE ***
 ul.residency-list {
 
   margin-top: 50px;
@@ -118,16 +122,17 @@ ul.residency-list {
   }
 }
 
-#sec-rehearse {
-  background-color: white;
-  top: 100%;
-}
-
 $contact-banner-height: 80px;
 
+// *** REHEARSE PAGE ***
+
+// Need this div as banner is full width and so must be defined outside
+// col-xs-12 to avoid padding gaps at end.
 .rehearse-footer {
   background-color: $gold;
-  height: $contact-banner-height;
+  // Because divs do not grow to fit size of children (this is overflow?)
+  // overflow: autp 
+  overflow: auto; // WHY DOES THIS WORK?? 
   font-weight: bold;
   text-align: center;
 }
@@ -136,13 +141,27 @@ $contact-banner-height: 80px;
   line-height: $contact-banner-height;
   vertical-align: middle;
   text-align: center;
+  margin: 0;
 }
 
-#sec-record {
-  background-color: $gold;
+// *** RECORD PAGE ***
+#RecordedArtistsList {
+  list-style-type: none;
+  font-weight: bold;
+  margin: 0;
+  
+  li {
+    padding-bottom: 0.8em;
+  }
 }
 
-#sec-residents {
+#sc-player {
+  margin-top: 100px;
+  margin-bottom: 100px;
+}
+
+// *** RESIDENTS PAGE ***
+#section-residents {
   background-color: $light-grey;
 }
 
@@ -151,14 +170,21 @@ table.residents {
   text-align: center;
 }
 
-.page-content {
-  //margin-top: 20px;
+// *** RADIO PAGE ***
+#section-radio {
+  background-color: $dark-grey;
 }
 
+// *** ABOUT PAGE ***
 .team-info h4, .team-info p {
   text-align: center;
 }
 
 .team-info p.role {
   font-weight: bold;
+}
+
+// *** CONTACT PAGE ***
+#section-contact {
+  background-color: $gold;
 }

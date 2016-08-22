@@ -110,10 +110,10 @@
   </div>
   <div class="page-content">
     <div class="row">
-      <div class="col-xs-4 col-xs-offset-1">
+      <div class="col-xs-12 col-md-5">
         <div class="record-img"><img src="<?= get_template_directory_uri(); ?>/dist/images/control_window.jpg" class="img-responsive"></div>
       </div>
-      <div class="col-xs-6">
+      <div class="col-xs-12 col-md-7">
         <p>
           £200 for one full day in the studio, 11am - 11pm , includes engineering fee.
           
@@ -131,83 +131,88 @@
       </div>
     </div>
     <div class="row">
-      <div class="col-xs-4 col-xs-offset-1">
+      <div class="col-md-5">
         <div class="record-img"><img src="<?= get_template_directory_uri(); ?>/dist/images/control_desk.jpg" class="img-responsive"></div>
       </div>
-      <div class="col-xs-6">
+      <div class="col-md-7">
         <div class="heading">
           <h3>Past Recorded Artist</h3>
         </div>
+        <ul id="RecordedArtistsList">
+          <li>Dooks</li>
+          <li>Francobollo</li>
+          <li>Mohit</li>
+          <li>L.A Salami</li>
+          <li>Lovepark</li>
+          <li>Acrobat</li>
+          <li>Elizabeth</li>
+        </ul>
       </div>
     </div>
     <div class="row">
-      <div class="col-xs-12">
-        <h2>Soundcloud</h2>
+      <div class="col-xs-12 col-md-10 col-md-offset-1">
+        <iframe id="sc-player" width="100%" height="166" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/254675343&amp;color=ff5500&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false"></iframe>
       </div>
     </div>
   </div>
 </div>
 
 <!-- SECTION RESIDENTS -->
-<div id="section-residents" class="container-fluid">
-  <div class="row">
-    <div class="col-md-8 col-md-offset-2">
-      <div class="heading">
-        <h1>Residents</h1>
-      </div>
+<div class="row" id="section-residents">
+  <div class="col-md-8 col-md-offset-2">
+    <div class="heading">
+      <h1>Residents</h1>
     </div>
   </div>
-  <div class="page-content">
-    <div class="row">
-      <div class="col-xs-10 col-xs-offset-1 col-md-8 col-md-offset-2">
-        <div id="myCarousel" data-ride="carousel" class="carousel slide">
-          <div role="listbox" class="carousel-inner">
-          <div class="item active"><img src="<?= get_template_directory_uri(); ?>/dist/images/resident-dooks.jpg" alt="Chania" class="img-circle"></div>
-            <div class="item"><img src="<?= get_template_directory_uri(); ?>/dist/images/resident-3.jpg" alt="Chania" class="img-circle"></div>
-            <div class="item"><img src="<?= get_template_directory_uri(); ?>/dist/images/resident-4.jpg" alt="Chania" class="img-circle"></div>
-            <div class="item"><img src="<?= get_template_directory_uri(); ?>/dist/images/resident-4.jpg" alt="Chania" class="img-circle"></div>
-            <div class="item"><img src="<?= get_template_directory_uri(); ?>/dist/images/resident-4.jpg" alt="Chania" class="img-circle"></div>
-            <div class="item"><img src="<?= get_template_directory_uri(); ?>/dist/images/resident-4.jpg" alt="Chania" class="img-circle"></div>
-            <div class="item"><img src="<?= get_template_directory_uri(); ?>/dist/images/resident-4.jpg" alt="Chania" class="img-circle"></div>
-            <div class="item"><img src="<?= get_template_directory_uri(); ?>/dist/images/resident-4.jpg" alt="Chania" class="img-circle"></div>
-            <div class="item"><img src="<?= get_template_directory_uri(); ?>/dist/images/resident-4.jpg" alt="Chania" class="img-circle"></div>
-            <div class="item"><img src="<?= get_template_directory_uri(); ?>/dist/images/resident-4.jpg" alt="Chania" class="img-circle"></div>
-            <div class="item"><img src="<?= get_template_directory_uri(); ?>/dist/images/resident-4.jpg" alt="Chania" class="img-circle"></div>
-          </div><a href="#myCarousel" role="button" data-slide="prev" class="left carousel-control"><span aria-hidden="true" class="fa fa-chevron-left fa-2x"></span><span class="sr-only">Previous</span></a><a href="#myCarousel" role="button" data-slide="next" class="right carousel-control"><span aria-hidden="true" class="fa fa-chevron-right fa-2x"><span class="sr-only">Next</span></span></a>
-          <h2>Dooks</h2>
-        </div>
-        <table class="residents">
-          <tr>
-            <td>band1</td>
-            <td>band4</td>
-            <td>band7</td>
-          </tr>
-          <tr>
-            <td>band2</td>
-            <td>band5</td>
-            <td>band8</td>
-          </tr>
-          <tr>
-            <td>band3</td>
-            <td>band6</td>
-            <td>band9</td>
-          </tr>
-        </table>
-      </div>
+  <div class="col-md-10 col-md-offset-1">
+    <div id="myCarousel" data-ride="carousel" class="carousel slide">
+      <div role="listbox" class="carousel-inner">
+      <div class="item active"><img src="<?= get_template_directory_uri(); ?>/dist/images/resident-dooks.jpg" alt="Chania" class="img-circle"></div>
+        <div class="item"><img src="<?= get_template_directory_uri(); ?>/dist/images/resident-3.jpg" alt="Chania" class="img-circle"></div>
+        <div class="item"><img src="<?= get_template_directory_uri(); ?>/dist/images/resident-4.jpg" alt="Chania" class="img-circle"></div>
+        <div class="item"><img src="<?= get_template_directory_uri(); ?>/dist/images/resident-4.jpg" alt="Chania" class="img-circle"></div>
+        <div class="item"><img src="<?= get_template_directory_uri(); ?>/dist/images/resident-4.jpg" alt="Chania" class="img-circle"></div>
+        <div class="item"><img src="<?= get_template_directory_uri(); ?>/dist/images/resident-4.jpg" alt="Chania" class="img-circle"></div>
+        <div class="item"><img src="<?= get_template_directory_uri(); ?>/dist/images/resident-4.jpg" alt="Chania" class="img-circle"></div>
+        <div class="item"><img src="<?= get_template_directory_uri(); ?>/dist/images/resident-4.jpg" alt="Chania" class="img-circle"></div>
+        <div class="item"><img src="<?= get_template_directory_uri(); ?>/dist/images/resident-4.jpg" alt="Chania" class="img-circle"></div>
+        <div class="item"><img src="<?= get_template_directory_uri(); ?>/dist/images/resident-4.jpg" alt="Chania" class="img-circle"></div>
+        <div class="item"><img src="<?= get_template_directory_uri(); ?>/dist/images/resident-4.jpg" alt="Chania" class="img-circle"></div>
+      </div><a href="#myCarousel" role="button" data-slide="prev" class="left carousel-control"><span aria-hidden="true" class="fa fa-chevron-left fa-2x"></span><span class="sr-only">Previous</span></a><a href="#myCarousel" role="button" data-slide="next" class="right carousel-control"><span aria-hidden="true" class="fa fa-chevron-right fa-2x"><span class="sr-only">Next</span></span></a>
+      <h2>Dooks</h2>
+    </div>
+    <table class="residents">
+      <tr>
+        <td>band1</td>
+        <td>band4</td>
+        <td>band7</td>
+      </tr>
+      <tr>
+        <td>band2</td>
+        <td>band5</td>
+        <td>band8</td>
+      </tr>
+      <tr>
+        <td>band3</td>
+        <td>band6</td>
+        <td>band9</td>
+      </tr>
+    </table>
+  </div>
+</div>
+
+
+<!-- SECTION RADIO -->
+<div class="row" id="section-radio">
+  <div class="col-md-8 col-md-offset-2">
+    <div class="heading">
+      <h1>Radio</h1>
     </div>
   </div>
 </div>
-<div id="section-radio" class="container-fluid">
-  <div class="row">
-    <div class="col-md-8 col-md-offset-2">
-      <div class="heading">
-        <h1>Radio</h1>
-      </div>
-    </div>
-  </div>
-  <div class="page-content">
-  </div>
-</div>
+
+
+<!-- SECTION ABOUT -->
 <div id="section-about" class="container-fluid">
   <div class="row">
     <div class="col-md-8 col-md-offset-2">
@@ -231,23 +236,18 @@
       </div>
     </div>
     <div class="row">
-      <div class="col-md-10 col-md-offset-1">
+      <div class="col-xs-12">
         <div class="heading">
           <h3>Gallery</h3>
         </div>
-        <div id="galleryCarouel" data-ride="carousel" class="carousel slide">
+        <div id="galleryCarousel" data-ride="carousel" class="carousel slide">
           <div role="listbox" class="carousel-inner">
-            <div class="item active"><img src="<?= get_template_directory_uri(); ?>/dist/images/resident-dooks.jpg" alt="Chania"></div>
-            <div class="item"><img src="<?= get_template_directory_uri(); ?>/dist/images/resident-3.jpg" alt="Chania"></div>
-            <div class="item"><img src="<?= get_template_directory_uri(); ?>/dist/images/resident-4.jpg" alt="Chania"></div>
-            <div class="item"><img src="<?= get_template_directory_uri(); ?>/dist/images/resident-4.jpg" alt="Chania"></div>
-            <div class="item"><img src="<?= get_template_directory_uri(); ?>/dist/images/resident-4.jpg" alt="Chania"></div>
-            <div class="item"><img src="<?= get_template_directory_uri(); ?>/dist/images/resident-4.jpg" alt="Chania"></div>
-            <div class="item"><img src="<?= get_template_directory_uri(); ?>/dist/images/resident-4.jpg" alt="Chania"></div>
-            <div class="item"><img src="<?= get_template_directory_uri(); ?>/dist/images/resident-4.jpg" alt="Chania"></div>
-            <div class="item"><img src="<?= get_template_directory_uri(); ?>/dist/images/resident-4.jpg" alt="Chania"></div>
-            <div class="item"><img src="<?= get_template_directory_uri(); ?>/dist/images/resident-4.jpg" alt="Chania"></div>
-            <div class="item"><img src="<?= get_template_directory_uri(); ?>/dist/images/resident-4.jpg" alt="Chania"></div>
+            <div class="item active"><img src="<?= get_template_directory_uri(); ?>/dist/images/FT_tamborine.jpg" alt="Chania"></div>
+            <div class="item"><img src="<?= get_template_directory_uri(); ?>/dist/images/FT_main.jpg" alt="Chania"></div>
+            <div class="item"><img src="<?= get_template_directory_uri(); ?>/dist/images/FT_main_2.jpg" alt="Chania"></div>
+            <div class="item"><img src="<?= get_template_directory_uri(); ?>/dist/images/FT_one.jpg" alt="Chania"></div>
+            <div class="item"><img src="<?= get_template_directory_uri(); ?>/dist/images/FT_cables.jpg" alt="Chania"></div>
+            <div class="item"><img src="<?= get_template_directory_uri(); ?>/dist/images/FT_door.jpg" alt="Chania"></div>
           </div><a href="#galleryCarousel" role="button" data-slide="prev" class="left carousel-control"><span aria-hidden="true" class="fa fa-chevron-left fa-2x"><span class="sr-only">Previous</span></span></a><a href="#galleryCarousel" role="button" data-slide="next" class="right carousel-control"><span aria-hidden="true" class="fa fa-chevron-right fa-2x"><span class="sr-only">Next</span></span></a>
         </div>
       </div>
@@ -258,7 +258,7 @@
           <h3>The team</h3>
         </div>
         <div class="row">
-          <div class="col-xs-6">
+          <div class="col-xs-12 col-sm-6">
             <div class="team-img"><img src="<?= get_template_directory_uri(); ?>/dist/images/nathan_square.jpg" class="img-circle img-responsive"></div>
             <div class="team-info">
               <h4>Daisy Dooks</h4>
@@ -266,7 +266,7 @@
               <p>dooks@fattankstudio.co.uk</p>
             </div>
           </div>
-          <div class="col-xs-6">
+          <div class="col-xs-12 col-sm-6">
             <div class="team-img"> <img src="<?= get_template_directory_uri(); ?>/dist/images/nathan_square.jpg" class="img-circle img-responsive"></div>
             <div class="team-info">
               <h4>Nathan Coen</h4>
@@ -280,15 +280,45 @@
     </div>
   </div>
 </div>
-<div id="section-contact" class="container-fluid">
-  <div class="row">
-    <div class="col-md-8 col-md-offset-2">
-      <div class="heading">
-        <h1>Contact</h1>
-      </div>
+
+<!-- SECTION CONTACT -->
+<div class="row" id="section-contact">
+  <div class="col-md-8 col-md-offset-2">
+    <div class="heading">
+      <h1>Contact</h1>
     </div>
   </div>
-  <div class="page-content">
+  <div class="col-md-6 col-md-offset-1">
+    <form class="form-horizontal">
+      <div class="form-group">
+        <label for="inputEmail3" class="col-sm-2 control-label">Email</label>
+        <div class="col-sm-10">
+          <input type="email" class="form-control" id="inputEmail3" placeholder="Email">
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="inputPassword3" class="col-sm-2 control-label">Password</label>
+        <div class="col-sm-10">
+          <input type="password" class="form-control" id="inputPassword3" placeholder="Password">
+        </div>
+      </div>
+      <div class="form-group">
+        <div class="col-sm-offset-2 col-sm-10">
+          <div class="checkbox">
+            <label>
+              <input type="checkbox"> Remember me
+            </label>
+          </div>
+        </div>
+      </div>
+      <div class="form-group">
+        <div class="col-sm-offset-2 col-sm-10">
+          <button type="submit" class="btn btn-default">Sign in</button>
+        </div>
+      </div>
+    </form>
+  </div>
+  <div class="col-md-4">
   </div>
 </div>
 
