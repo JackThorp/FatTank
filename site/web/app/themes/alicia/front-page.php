@@ -11,17 +11,21 @@
     <div class="row">
       <div class="col-md-8 col-md-offset-2">
         <h4>List equipment</h4>
-        <p>2 Rehearsal rooms / Mackie SRM450 V3 PA Speakers /Mackie ProFX12 mixer / 4 Mics (sm58) / 4 Mic stands (K&M) / XLRs. </p>
-        <p>Guitar & Bass amps and a drum kit are also available to use at no extra charge. Bands also have full use of the shower room and kitchen area.</p>
+        <?php echo wpautop( get_theme_mod('equipment_text')) ?> 
+        <!--<p>2 Rehearsal rooms / Mackie SRM450 V3 PA Speakers /Mackie ProFX12 mixer / 4 Mics (sm58) / 4 Mic stands (K&M) / XLRs. </p>
+        <p>Guitar & Bass amps and a drum kit are also available to use at no extra charge. Bands also have full use of the shower room and kitchen area.</p>-->
         <div class="heading">
           <h3> Fat Tank offers one-off slots and residency packages: </h3>
         </div>
         <h4>One-off Slots</h4>
-        <p>Non-residency rehearsals are £50 for a day (11am – 6pm) or evening (6pm – 11pm). Simply get in touch at contact@fattankstudios.co.uk to book a time and get playing!</p>
+        <?php echo wpautop( get_theme_mod('oneoff_text')) ?> 
+        <!--<p>Non-residency rehearsals are £50 for a day (11am – 6pm) or evening (6pm – 11pm). Simply get in touch at contact@fattankstudios.co.uk to book a time and get playing!</p>-->
 
         <h4>Residencies</h4>
         <div class="row">
           <div class="col-xs-12 col-md-8">
+            <?php echo wpautop( get_theme_mod('residencies_text')) ?> 
+            <!--
             <p>
               Instead of booking in every week and carting your instruments and amps across town, many
               bands choose to pay monthly for set rehearsals and storage. If you opt for a residency pack-age, 
@@ -41,6 +45,7 @@
               You can choose between DAY (11am - 6pm) or EVENING (6pm – 11pm) slots, bands can chop and change between
               the two.
             </p>
+            -->
           </div>
           <div class="col-xs-12 col-md-4">
             <div class="prices-table one">
@@ -88,12 +93,12 @@
   </div>
 </div>
 
-<!-- SECTION CONTACT FOOTER -->
+<!-- SECTION CONTACT BANNER -->
 <!--<div class="container-fluid">-->
   <div class="row">
-    <div class="rehearse-footer">
+    <div class="contact-banner">
       <div class="col-xs-12">
-        <p>For viewings and bookings get in touch : contact@fattankstudios.co.uk // +447845528341</p>
+        <p>For viewings and bookings get in touch : <?php echo get_theme_mod('contact_email'); ?> // <?php echo get_theme_mod('contact_number'); ?></p>
       </div>
     </div>
   </div>
@@ -114,6 +119,8 @@
         <div class="record-img"><img src="<?= get_template_directory_uri(); ?>/dist/images/control_window.jpg" class="img-responsive"></div>
       </div>
       <div class="col-xs-12 col-md-7">
+        <?php echo wpautop(get_theme_mod('record_text')); ?>
+<!--
         <p>
           £200 for one full day in the studio, 11am - 11pm , includes engineering fee.
           
@@ -128,6 +135,7 @@
           
         </p>
         <p>(Current Tech Spec)</p>
+        -->
       </div>
     </div>
     <div class="row">
@@ -151,7 +159,9 @@
     </div>
     <div class="row">
       <div class="col-xs-12 col-md-10 col-md-offset-1">
-        <iframe id="sc-player" width="100%" height="166" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/254675343&amp;color=ff5500&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false"></iframe>
+        <div id="sc-player">
+        <?php echo get_theme_mod("soundcloud_track"); ?>
+        </div>
       </div>
     </div>
   </div>
@@ -224,6 +234,8 @@
   <div class="page-content">
     <div class="row">
       <div class="col-md-8 col-md-offset-2">
+        <?php echo wpautop( get_theme_mod('about_text')) ?>
+<!--
         <p>
           Founded by musicians for musicians, Fat Tank is a rehearsal and recording studio situated in Manor House, North London.
           Offering residency packages and one-off slots as well as recording options at bargain prices, Fat Tank has 
@@ -233,6 +245,7 @@
           The kettle is always on.
           
         </p>
+-->
       </div>
     </div>
     <div class="row">
@@ -240,6 +253,10 @@
         <div class="heading">
           <h3>Gallery</h3>
         </div>
+      </div>
+      <div class="col-xs-12">
+      <?php echo do_shortcode("[metaslider id=21]"); ?>
+        <!--
         <div id="galleryCarousel" data-ride="carousel" class="carousel slide">
           <div role="listbox" class="carousel-inner">
             <div class="item active"><img src="<?= get_template_directory_uri(); ?>/dist/images/FT_tamborine.jpg" alt="Chania"></div>
@@ -250,6 +267,7 @@
             <div class="item"><img src="<?= get_template_directory_uri(); ?>/dist/images/FT_door.jpg" alt="Chania"></div>
           </div><a href="#galleryCarousel" role="button" data-slide="prev" class="left carousel-control"><span aria-hidden="true" class="fa fa-chevron-left fa-2x"><span class="sr-only">Previous</span></span></a><a href="#galleryCarousel" role="button" data-slide="next" class="right carousel-control"><span aria-hidden="true" class="fa fa-chevron-right fa-2x"><span class="sr-only">Next</span></span></a>
         </div>
+        -->
       </div>
     </div>
     <div class="row">

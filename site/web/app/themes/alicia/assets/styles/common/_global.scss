@@ -128,7 +128,7 @@ $contact-banner-height: 80px;
 
 // Need this div as banner is full width and so must be defined outside
 // col-xs-12 to avoid padding gaps at end.
-.rehearse-footer {
+.contact-banner {
   background-color: $gold;
   // Because divs do not grow to fit size of children (this is overflow?)
   // overflow: autp 
@@ -137,9 +137,12 @@ $contact-banner-height: 80px;
   text-align: center;
 }
 
-.rehearse-footer p {
+.contact-banner p {
   line-height: $contact-banner-height;
   vertical-align: middle;
+  font-family: Helvetica Neue,Helvetica,Arial,sans-serif;
+  font-weight: bold;
+  color: $black;
   text-align: center;
   margin: 0;
 }
