@@ -27,7 +27,7 @@ $tw-blue: #5ba8da;
 // font-family is the name assigned to this font i.e. it is a property assigned by us and does not effect the rendering
 @font-face {
 	font-family: NewsGothicOblique;
-  font-stretch: ultra-expanded;
+  font-stretch: ultra-expanded; 
 	src: url('../fonts/NewsGothicOblique.ttf');
 	src: url('../fonts/NewsGothicOblique.ttf')  format('truetype');	
 }

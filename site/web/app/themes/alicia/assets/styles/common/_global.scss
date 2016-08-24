@@ -14,6 +14,9 @@ body{
   //text-align: center; // Makes the headings center aligned . . .?
 }
 
+.fa-facebook { color: $fb-blue; }
+.fa-twitter { color: $tw-blue;}
+
 // HEADINGS
 .heading {
   text-align: center;
@@ -191,3 +194,28 @@ table.residents {
 #section-contact {
   background-color: $gold;
 }
+
+#contact-form {
+  margin: 0 20px;
+}
+
+#contact-form .form-control {
+  border-radius: 8px;
+  border-color: $black;
+}
+
+#contact-form .btn {
+  width: 100%;
+  color: $white;
+  border-radius: 8px;
+  border-color: $orange;
+  text-transform: uppercase;
+  background-color: $orange;
+}
+
+#map {
+  width: 100%;
+  height: auto;
+}
+
+

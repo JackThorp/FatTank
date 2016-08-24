@@ -175,22 +175,24 @@
     </div>
   </div>
   <div class="col-md-10 col-md-offset-1">
+    
+    <?php query_posts('cat=4&showposts=3');
+    if (have_posts()) : ?>
     <div id="myCarousel" data-ride="carousel" class="carousel slide">
-      <div role="listbox" class="carousel-inner">
-      <div class="item active"><img src="<?= get_template_directory_uri(); ?>/dist/images/resident-dooks.jpg" alt="Chania" class="img-circle"></div>
-        <div class="item"><img src="<?= get_template_directory_uri(); ?>/dist/images/resident-3.jpg" alt="Chania" class="img-circle"></div>
-        <div class="item"><img src="<?= get_template_directory_uri(); ?>/dist/images/resident-4.jpg" alt="Chania" class="img-circle"></div>
-        <div class="item"><img src="<?= get_template_directory_uri(); ?>/dist/images/resident-4.jpg" alt="Chania" class="img-circle"></div>
-        <div class="item"><img src="<?= get_template_directory_uri(); ?>/dist/images/resident-4.jpg" alt="Chania" class="img-circle"></div>
-        <div class="item"><img src="<?= get_template_directory_uri(); ?>/dist/images/resident-4.jpg" alt="Chania" class="img-circle"></div>
-        <div class="item"><img src="<?= get_template_directory_uri(); ?>/dist/images/resident-4.jpg" alt="Chania" class="img-circle"></div>
-        <div class="item"><img src="<?= get_template_directory_uri(); ?>/dist/images/resident-4.jpg" alt="Chania" class="img-circle"></div>
-        <div class="item"><img src="<?= get_template_directory_uri(); ?>/dist/images/resident-4.jpg" alt="Chania" class="img-circle"></div>
-        <div class="item"><img src="<?= get_template_directory_uri(); ?>/dist/images/resident-4.jpg" alt="Chania" class="img-circle"></div>
-        <div class="item"><img src="<?= get_template_directory_uri(); ?>/dist/images/resident-4.jpg" alt="Chania" class="img-circle"></div>
-      </div><a href="#myCarousel" role="button" data-slide="prev" class="left carousel-control"><span aria-hidden="true" class="fa fa-chevron-left fa-2x"></span><span class="sr-only">Previous</span></a><a href="#myCarousel" role="button" data-slide="next" class="right carousel-control"><span aria-hidden="true" class="fa fa-chevron-right fa-2x"><span class="sr-only">Next</span></span></a>
-      <h2>Dooks</h2>
+      <div role="listbox" class="carousel-inner"> 
+        <?php $count = 0; while (have_posts()): the_post(); ?>
+        <div class="item <? if ($count==0): echo 'active'; endif; $count++;?>">
+          <img src=<?php $image_id = get_post_thumbnail_id(); 
+                        $image_url = wp_get_attachment_image_src($image_id,'full'); 
+                        echo $image_url[0];?> alt="Chania" class="img-circle">
+        </div>
+        <?php endwhile; ?>
+      </div>
+      <a href="#myCarousel" role="button" data-slide="prev" class="left carousel-control"><span aria-hidden="true" class="fa fa-chevron-left fa-2x"></span><span class="sr-only">Previous</span></a>
+      <a href="#myCarousel" role="button" data-slide="next" class="right carousel-control"><span aria-hidden="true" class="fa fa-chevron-right fa-2x"><span class="sr-only">Next</span></span></a>
+      <h2><?php echo the_title(); ?></h2>
     </div>
+    <?php endif; wp_reset_postdata(); ?>
     <table class="residents">
       <tr>
         <td>band1</td>
@@ -307,36 +309,43 @@
     </div>
   </div>
   <div class="col-md-6 col-md-offset-1">
-    <form class="form-horizontal">
+    <form id="contact-form" class="form-horizontal">
       <div class="form-group">
-        <label for="inputEmail3" class="col-sm-2 control-label">Email</label>
+      <label for="name" class="col-sm-2 control-label">Name <span>*</span></label>
         <div class="col-sm-10">
-          <input type="email" class="form-control" id="inputEmail3" placeholder="Email">
+        <input type="text" name="message_name" value="" class="form-control" id="name">
         </div>
-      </div>
+      </div>     
       <div class="form-group">
-        <label for="inputPassword3" class="col-sm-2 control-label">Password</label>
+        <label for="email" class="col-sm-2 control-label">Email</label>
         <div class="col-sm-10">
-          <input type="password" class="form-control" id="inputPassword3" placeholder="Password">
+          <input type="email" class="form-control" id="email">
         </div>
       </div>
       <div class="form-group">
-        <div class="col-sm-offset-2 col-sm-10">
-          <div class="checkbox">
-            <label>
-              <input type="checkbox"> Remember me
-            </label>
-          </div>
+        <label for="message" class="col-sm-2 control-label">Message</label>
+        <div class="col-sm-10">
+          <textarea id="message" class="form-control" rows="8"></textarea>
         </div>
       </div>
       <div class="form-group">
-        <div class="col-sm-offset-2 col-sm-10">
-          <button type="submit" class="btn btn-default">Sign in</button>
+        <div class="col-sm-offset-10 col-sm-2">
+          <button type="submit" class="btn btn-default">Send</button>
         </div>
       </div>
     </form>
   </div>
   <div class="col-md-4">
+    <div id="contactDivider">
+      <address>
+        Unit 3B <br>
+        167 Hermitage Road <br>
+        Manor House <br>
+        N4 1LZ
+      </address>
+      <p> contact@fattankstudios.co.uk </p>
+      <div id="map"></div>
+    </div>
   </div>
 </div>
 
