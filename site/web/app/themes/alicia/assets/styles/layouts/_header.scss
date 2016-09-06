@@ -7,13 +7,6 @@ $navbarheight: 80px;
   height: $navbarheight;
   width: 100%;
 }
-
-#navbar img {
-  height: 70px;
-  margin-top: 5px;
-  margin-bottom: 5px;
-}
-
 #navbar ul.topnav {
   list-style-type: none;  // Removes bullets from list
   position: absolute;     // positioned relative to first positioned (non static) ancestor which here should be the #navbar
@@ -26,55 +19,62 @@ $navbarheight: 80px;
   height: initial;        // Can't specify a fixed height because it stops navbar droping on responsive
   padding: 0;
   
-  img {
-    padding-left: 2em;   
-  }
 
   @media screen and (min-width: $screen-sm-min) {
     height: $navbarheight;
   }
 }
 
-
-// Add this class to navbar on scroll down
-.nav-up {
-  top: -$navbarheight;
+// BRAND IMAGE STYLES
+ul.topnav img {
+  // Total height is equal to 80px = navbar height.
+  height: 70px;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  // padding matches that of links to give even 
+  // padding on both sides of navbar
+  padding-left: 2em;
 }
 
-// Add this class on scroll up
-.nav-down {
-  top: 0;
-}
 // Change background color of links on hover 
+// TODO change to something better
 ul.topnav li a:hover {background-color: rgba(0,0,0,0.2);}
-
-//Social Navigation links
-ul.topnav li.social-icon {
-  float: right;
-  display: inline-block;
-  
-  a {
-    padding: 0;
-  }
-  // override selector above
-  
-  padding-top: 25px;
-  padding-bottom: 25px;
-  
-}
-
 
 // COLLAPSED list items on small screens.
 // Hide all menu items apart from brand and menu icon
+ul.topnav li {
+  display: inline; 
+  line-height: 10px;
+}
 ul.topnav li:not(:first-child) {display: none;}
 ul.topnav li.menu-icon {
   float: right;
   display: inline-block;
 }
+
+ul.topnav li.social-icon {
+  // fa-2x are 30px large so to sit in 80px
+  // navbar vertical central they need 80-30/2 padding 
+  // this overrides the 
+  padding: 25px 2em;
+
+  @media screen and (min-width: $screen-sm-min) {
+    float: right;
+  }
+}
+
+ul.topnav li.social-icon a {
+  padding: 0 1em;
+}
+
+ul.topnav li:not(:first-child):not(.social-icon) a {
+  padding: 35px 2em;
+}
 ul.topnav li:not(:first-child) a {
   color: $white;
+  display: inline-block;
   text-align: center;
-  padding: 35px 2em;
+  //padding: 35px 2em;
   text-decoration: none;
   transition: 0.3s;
   font-size: 15px;
@@ -84,13 +84,14 @@ ul.topnav li:not(:first-child) a {
 
 // On bigger screens show all list items and hide menu icon.
 @media screen and (min-width: $screen-sm-min) {
+  
   ul.topnav li {
     display: inline !important;
     line-height: 10px;
   }
   ul.topnav li.menu-icon {display: none !important;}
   ul.topnav li:not(:first-child) a {
-    display: inline-block !important;
+    //display: inline-block !important;
   }
 }
 
@@ -102,6 +103,17 @@ ul.topnav.responsive li.menu-icon {
   right: 0;
   top: 0;
 }
+
+ul.topnav.responsive li.social-icon {
+  padding-left: 2em;
+}
+ul.topnav.responsive li.social-icon a {
+  display: inline-block;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-right: 1em;
+  padding-left: 0;
+}
   
 ul.topnav.responsive li {
   float: none;
@@ -111,6 +123,10 @@ ul.topnav.responsive li {
 ul.topnav.responsive li a {
   display: block;
   text-align: left;
+}
+
+ul.topnav.responsive li:not(:first-child):not(.social-icon):not(.menu-icon) a {
+  padding: 20px 2em;
 }
 
 // The "responsive" class is added to the topnav with JavaScript when the user clicks on the icon. This class makes the topnav look good on small screens 
@@ -124,3 +140,13 @@ ul.topnav.responsive li a {
   }
 }
 
+// NAVBAR ANIMATION CLASSES
+// Add this class to navbar on scroll down
+.nav-up {
+  top: -$navbarheight;
+}
+
+// Add this class on scroll up
+.nav-down {
+  top: 0;
+}
