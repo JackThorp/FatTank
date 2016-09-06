@@ -105,6 +105,8 @@ function assets() {
   
   if (is_front_page()) {
     wp_enqueue_script('theme_homepage', Assets\asset_path('scripts/homepage.js'), ['jquery'], null, true);
+    wp_enqueue_script('theme_map', Assets\asset_path('scripts/map.js'), ['jquery'], null, true);
+    wp_enqueue_script('g_maps', 'https://maps.googleapis.com/maps/api/js?key=AIzaSyAVUMFdQ9J0I708VrX_3nMI2rvasgilskQ&callback=initMap', ['theme_map'], null, true);
   }
 }
 add_action('wp_enqueue_scripts', __NAMESPACE__ . '\\assets', 100);

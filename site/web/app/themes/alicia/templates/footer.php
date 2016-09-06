@@ -2,7 +2,7 @@
 <footer>
   <div class="container-fluid">
     <div class="row">
-      <!--.col-sm-1.col-sm-push-3-->
+      <!--.col-sm-1.col-sm-push-3- -->
       <div class="col-xs-6 col-sm-2 col-sm-push-3">
         <ul class="footer-links">
           <li><a href="#section-start">Start</a></li>
@@ -29,12 +29,12 @@
           <i aria-hidden="true" class="fa fa-twitter fa-3x"></i>
         </div>
       </div>
-      <div class="col-xs-6 col-sm-3 col-sm-pull-6">
-        <img src="<?= get_template_directory_uri(); ?>/dist/images/Fattank-logovit.png">
-      </div>
-      <div class="col-xs-6 col-sm-3">
+      <div class="col-xs-12 col-sm-3 col-sm-push-3">
         <p>Join our mailing list</p>
         <input type="email" placeholder="email" class="form-control">
+      </div>
+      <div class="col-xs-12 col-sm-3 col-sm-pull-9">
+        <img src="<?= get_template_directory_uri(); ?>/dist/images/Fattank-logovit.png">
       </div>
     </div>
   </div>

@@ -18,19 +18,21 @@ $navbarheight: 80px;
   list-style-type: none;  // Removes bullets from list
   position: absolute;     // positioned relative to first positioned (non static) ancestor which here should be the #navbar
   display: inline;
-  height: $navbarheight;
-  @media screen and (max-width: 680px) {
-    height: initial;
-  }           // Can't specify a fixed height because it stops navbar droping on responsive
-  width: 100%;
   margin: 0;              // Remove normal list margins
-  padding-left: 5%;         // Remove normal list padding
-  padding-right: 5%;
-  @media screen and (max-width: 680px) {
-    padding: 0;
-  }
   overflow: hidden;
   background-color: rgba(0,0,0,0.4); // Color must be on list so that the background grows to fit an uncollapsed menu
+  width: 100%;
+
+  height: initial;        // Can't specify a fixed height because it stops navbar droping on responsive
+  padding: 0;
+  
+  img {
+    padding-left: 2em;   
+  }
+
+  @media screen and (min-width: $screen-sm-min) {
+    height: $navbarheight;
+  }
 }
 
 
@@ -53,39 +55,55 @@ ul.topnav li:not(:first-child) a {
   display: inline-block;
   color: $white;
   text-align: center;
-  padding: 35px 4%;
+  padding: 35px 2em;
   text-decoration: none;
   transition: 0.3s;
   font-size: 15px;
-  font-weight: lighter;
+  font-family: GillSansNovaLight;
+  letter-spacing: 0.1em;
 }
 
 // Change background color of links on hover 
 ul.topnav li a:hover {background-color: rgba(0,0,0,0.2);}
 
 // Hide the list item that contains the link that should open and close the topnav on small screens 
-ul.topnav li.icon {display: none;}
+ul.topnav li.menu-icon {
+  float: right;
+  display: inline-block;
+}
+
+@media screen and (min-width: $screen-sm-min) {
+  ul.topnav li.menu-icon {display: none;}
+}
 
 //Social Navigation links
 ul.topnav li.social-icon {
   float: right;
   display: inline-block;
-  padding: 0;
+  
+  a {
+    padding: 0;
+  }
+  // override selector above
+  
+  padding-top: 25px;
+  padding-bottom: 25px;
+  
 }
 
-// When the screen is less than 680 pixels wide, hide all list items, except for the first one ("Home"). Show the list item that contains the link to open and close the topnav (li.icon) 
-@media screen and (max-width: 680px) {
+// On small screen hide all list items except for ("Home") and collapse menu.
+@media screen and (max-width: $screen-sm-min) {
   ul.topnav li:not(:first-child) {display: none;}
-  ul.topnav li.icon {
+  ul.topnav li.menu-icon {
     float: right;
     display: inline-block;
   }
 }
 
 // The "responsive" class is added to the topnav with JavaScript when the user clicks on the icon. This class makes the topnav look good on small screens 
-@media screen and (max-width: 680px) {
+@media screen and (max-width: $screen-sm-min) {
   ul.topnav.responsive {position: relative;}
-  ul.topnav.responsive li.icon {
+  ul.topnav.responsive li.menu-icon {
     position: absolute;
     right: 0;
     top: 0;
@@ -100,6 +118,7 @@ ul.topnav li.social-icon {
   }
 }
 
+// Style for white circle mwnu seperator
 #navbar ul li:not(:first-child):not(.social-icon):after { 
   content: " ";
   word-spacing: 0.5em;

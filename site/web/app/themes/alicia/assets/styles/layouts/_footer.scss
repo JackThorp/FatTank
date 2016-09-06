@@ -1,4 +1,4 @@
-$footer-height: 250px;
+$footer-height: 220px;
 $footer-content-height: 0.8 * $footer-height; 
 
 footer {
@@ -10,8 +10,8 @@ footer {
 
 footer img {
   //max-height: $footer-content-height; //100px;
-  width: 100%;
-  height: auto;
+  max-width: 100%;
+  max-height: $footer-content-height;
   display: block;
   margin: 0 auto;
 }
@@ -45,7 +45,7 @@ footer li a {
   visibility: hidden;
 }
 
-footer h3 {
+footer h2 {
   text-align: center;
   margin-top: 0;
   font-weight: bold;
@@ -60,6 +60,13 @@ footer i .fa {
   display: inline-block;
 }
 
+footer p {
+  margin: 0;
+  //letter-spacing: 0.1em;
+  color: $white;
+  padding-bottom: 10px;
+  //font-family: NewsGothicOblique; 
+}
 
 /*
 //TODO changing input box glow color

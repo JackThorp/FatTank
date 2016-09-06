@@ -17,20 +17,29 @@ body{
 .fa-facebook { color: $fb-blue; }
 .fa-twitter { color: $tw-blue;}
 
-// HEADINGS
-.heading {
+.text-center {
   text-align: center;
-  margin-top: 50px;
-  margin-bottom: 50px;
 }
+
+// By using min-width, all top level css applies at smallest screen size by default.
+// Media queries can then be used to tackle succesively larger screen sizes. 
+// Set sizes for em at each break point 
+@media screen and (min-width: $screen-sm-min) {
+  body { font-size: 180%; }
+}
+
+@media screen and (min-width: $screen-md-min) {
+  body { font-size: 180%; }
+}
+
 
 // H1 - main headings for page sections
 h1 {
   text-transform: uppercase;
   font-family: NewsGothicOblique;
   color: $blue;
-  font-size: 3em;
-  text-align: center;
+  font-size: 2em;
+  margin: 1.5em 0;
   letter-spacing: 2px;
   display: inline-block;
   padding-bottom: 5px;
@@ -80,18 +89,20 @@ h3:before {
 h3 {
   color: $maroon;
   border-bottom: 1px solid $black;
-  font-size: 1.5em;
+  font-size: 1.2em;
   text-align: center;
   font-family: NewsGothicOblique;
+  margin: 1em 0;
   padding-left: 0.8em;
   padding-right:0.8em;
   padding-bottom:0.2em;
-  display: inline;
+  display: inline-block;
 }
 
 h4 {
   font-family: NewsGothicOblique;
-  font-size: 1.2em;
+  font-size: 1.1em;
+  margin: 0.2em 0;
   font-weight: bold;
   color: $orange;
   text-align: left;
@@ -103,10 +114,9 @@ h4 {
 p {
   font-family: GillSansNovaLight;
   text-align: left;
-  font-weight: 200;  // Having no effect?
-  font-size: 1.1em;
+  font-size: 0.9em;
   color: #777;
-  line-height: 1.6em;
+  line-height: 1.5em;
   margin-bottom: 2em;
   word-spacing: 0.1em;
 }
@@ -211,11 +221,37 @@ table.residents {
   border-color: $orange;
   text-transform: uppercase;
   background-color: $orange;
+  letter-spacing: .1em;
+}
+
+#contact-form label {
+  font-family: GillSansNovaLight;
+  color: $black;
+  font-weight: 400;
+}
+
+.contact-error{
+  padding: 5px 9px;
+  border: 1px solid red;
+  color: red;
+  border-radius: 3px;
+}
+ 
+.success{
+  padding: 5px 9px;
+  border: 1px solid green;
+  color: green;
+  border-radius: 3px;
+}
+
+#contactDivider {
+  border-left: solid 1px $black;
+  margin-bottom: 50px;
 }
 
 #map {
-  width: 100%;
-  height: auto;
+  width: 300px;
+  height: 300px;
 }
 
 
