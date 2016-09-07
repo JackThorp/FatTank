@@ -13,8 +13,8 @@
             <li><a href="#section-about">About</a></li>
             <li><a href="#section-contact">Contact</a></li>
             <li class="social-icon">
-              <a><i class="fa fa-2x fa-facebook"></i></a>
-              <a><i class="fa fa-2x fa-twitter"></i></a>
+              <a href="http://facebook.com/FatTankStudios" target="_blank"><i class="fa fa-2x fa-facebook"></i></a>
+              <a href="https://twitter.com/fattankstudios" target="_blank"><i class="fa fa-2x fa-twitter"></i></a>
             </li>
             <li class="menu-icon"><a href="javascript:void(0);" onclick="menuToggle()">&#9776;</a></li>  
           </ul>

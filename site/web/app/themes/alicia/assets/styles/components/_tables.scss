@@ -1,8 +1,11 @@
 .prices-table {
+  margin-bottom: 1em;
   width:100%;
   display:table;
   text-align: left;
-  font-family: NewsGothicOblique;
+  font-family: GillSansNovaLight;
+  font-size: 0.9em;
+  letter-spacing: 0.1em;
   background-image:
     linear-gradient(to bottom, #283878, #5464a4);
 }

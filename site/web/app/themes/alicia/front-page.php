@@ -20,7 +20,7 @@
           <div class="col-xs-12 col-md-8">
             <?php echo wpautop( get_theme_mod('residencies_text')) ?> 
          </div>
-          <div class="col-xs-12 col-md-4">
+          <div class="col-xs-12 col-sm-8 col-sm-push-2 col-md-4 col-md-push-0">
             <div class="prices-table one">
               <div class="table-row">
                 <div class="cell">Sessions PCM</div>

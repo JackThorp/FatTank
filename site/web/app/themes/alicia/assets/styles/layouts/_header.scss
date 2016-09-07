@@ -56,7 +56,7 @@ ul.topnav li.social-icon {
   // fa-2x are 30px large so to sit in 80px
   // navbar vertical central they need 80-30/2 padding 
   // this overrides the 
-  padding: 25px 2em;
+  padding-right: 2em;
 
   @media screen and (min-width: $screen-sm-min) {
     float: right;
@@ -64,11 +64,15 @@ ul.topnav li.social-icon {
 }
 
 ul.topnav li.social-icon a {
-  padding: 0 1em;
+  padding: 25px 1em;
 }
 
-ul.topnav li:not(:first-child):not(.social-icon) a {
+ul.topnav li.menu-icon a {
   padding: 35px 2em;
+}
+
+ul.topnav li:not(:first-child):not(.social-icon):not(.menu-icon) a {
+  padding: 35px 4%;
 }
 ul.topnav li:not(:first-child) a {
   color: $white;
