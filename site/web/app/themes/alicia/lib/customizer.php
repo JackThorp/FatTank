@@ -56,8 +56,8 @@ function customize_register($wp_customize) {
   ));
 
   // CONTACT BANNER
-  $wp_customize->add_section('contact_banner', array(
-    'title'     => __('Contact Banner','Alicia'),
+  $wp_customize->add_section('contact_details', array(
+    'title'     => __('Contact Details','Alicia'),
     'priority'  => 3,
   ));
 
@@ -69,22 +69,49 @@ function customize_register($wp_customize) {
 
   $wp_customize->add_control('alicia_contact_number', array(
     'label'     => __('Contact Number', 'alicia'),
-    'section'   => 'contact_banner',
+    'section'   => 'contact_details',
     'settings'  => 'contact_number',
   ));
 
   $wp_customize->add_setting('contact_email', array(
-    'default'     => 'hello@mail.com',
+    'default'     => 'contact@fattankstudios.co.uk',
     'type'        =>  'theme_mod',
     'capability'  => 'edit_theme_options',
   ));
 
   $wp_customize->add_control('alicia_contact_email', array(
     'label'     => __('Contact Email', 'alicia'),
-    'section'   => 'contact_banner',
+    'section'   => 'contact_details',
     'settings'  => 'contact_email',
     'type'      => 'email'
   ));
+
+  $wp_customize->add_setting('twitter_address', array(
+    'default'     => 'https://twitter.com/fattankstudios',
+    'type'        => 'theme_mod',
+    'capability'  => 'edit_theme_options',
+  ));
+
+  $wp_customize->add_control('alicia_twitter_address', array(
+    'label'     => __('Twitter Address', 'alicia'),
+    'section'   => 'contact_details',
+    'settings'  => 'twitter_address',
+    'type'      => 'text'
+  ));
+
+  $wp_customize->add_setting('facebook_address', array(
+    'default'     => 'https://facebook.com/fattankstudios',
+    'type'        => 'theme_mod',
+    'capability'  => 'edit_theme_options',
+  ));
+
+  $wp_customize->add_control('alicia_facebook_address', array(
+    'label'     => __('Facebook Address', 'alicia'),
+    'section'   => 'contact_details',
+    'settings'  => 'facebook_address',
+    'type'      => 'text'
+  ));
+
 
   // RECORD SECTION
   $wp_customize->add_section('record', array(
@@ -117,6 +144,18 @@ function customize_register($wp_customize) {
     'section'  => 'record',
   ));
  
+  $wp_customize->add_setting('soundcloud_track', array(
+    'default'        => '',
+    'type'           => 'theme_mod',
+    'capability'     => 'edit_theme_options',
+  ));
+  
+  $wp_customize->add_control('alicia_soundcloud_track', array(
+    'settings' => 'soundcloud_track',
+    'label'    => __( 'Soundcloud Embed Link' ),
+    'section'  => 'record',
+  ));
+  
   // ABOUT SECTION
   $wp_customize->add_section('about', array(
     'title' => __('About', 'Alicia'),
@@ -136,18 +175,18 @@ function customize_register($wp_customize) {
     'type' => 'textarea',
   ));
 
-  $wp_customize->add_setting('soundcloud_track', array(
+  $wp_customize->add_setting('team_one_image', array(
     'default'        => '',
     'type'           => 'theme_mod',
     'capability'     => 'edit_theme_options',
   ));
   
-  $wp_customize->add_control('alicia_soundcloud_track', array(
-    'settings' => 'soundcloud_track',
-    'label'    => __( 'Soundcloud Embed Link' ),
-    'section'  => 'record',
-  ));
-  
+  $wp_customize->add_control( new \WP_Customize_Image_Control( $wp_customize, 'team_one_image', array(
+    'label'    => __( 'Team One Image', 'alicia' ),
+    'section'  => 'about',
+    'settings' => 'team_one_image',
+  ) ) );
+
 }
 add_action('customize_register', __NAMESPACE__ . '\\customize_register');
 

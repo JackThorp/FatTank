@@ -12,10 +12,11 @@
     // If current position > last position AND scrolled past navbar...
     if (st > lastScrollTop && st > navbarHeight){
       // Scroll Down
-      console.log('scrolled down');
-      $("#navbar").removeClass("nav-down").addClass("nav-up");
+      var x = document.getElementById("Topnav");
+      if (x.className === "topnav") {
+        $("#navbar").removeClass("nav-down").addClass("nav-up");
+      }
     } else {
-      console.log('scrolled up');
       // Scroll Up
       // If did not scroll past the document (possible on mac)...
       if(st + $(window).height() < $(document).height()) { 

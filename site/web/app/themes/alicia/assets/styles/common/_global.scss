@@ -11,6 +11,7 @@ html {
 body{
   margin: 0 auto; // Not sure why this is needed? Center the contect horizontally?
   width: 100%; // Sets width to full width of html, which is width of browser widow.
+  font-size: 160%;
   //text-align: center; // Makes the headings center aligned . . .?
 }
 
@@ -125,8 +126,9 @@ p {
 // *** RESIDENCY PAGE ***
 ul.residency-list {
 
-  margin-top: 50px;
-  margin-bottom: 50px;
+  margin: 2em 0;
+  font-family: GillSansNovaLight;
+  font-size: 0.9em;
 
   list-style-image: url('../images/bullet_image.png');
   li {
@@ -134,8 +136,6 @@ ul.residency-list {
     padding-bottom: 10px;
   }
 }
-
-$contact-banner-height: 80px;
 
 // *** REHEARSE PAGE ***
 
@@ -151,7 +151,8 @@ $contact-banner-height: 80px;
 }
 
 .contact-banner p {
-  line-height: $contact-banner-height;
+  line-height: 2em;
+  padding: 2em 0;
   vertical-align: middle;
   font-family: Helvetica Neue,Helvetica,Arial,sans-serif;
   font-weight: bold;
@@ -177,7 +178,7 @@ $contact-banner-height: 80px;
 }
 
 // *** RESIDENTS PAGE ***
-#section-residents {
+.section-residents {
   background-color: $light-grey;
 }
 
@@ -187,26 +188,42 @@ table.residents {
 }
 
 // *** RADIO PAGE ***
-#section-radio {
+.section-radio {
   background-color: $dark-grey;
 }
 
+.section-radio p {
+  text-align: center;
+}
+
 // *** ABOUT PAGE ***
+.team-info {
+  margin-bottom: 2em;
+}
+
 .team-info h4, .team-info p {
   text-align: center;
 }
 
+.team-info p {
+  margin-bottom: 0;
+}
+
 .team-info p.role {
   font-weight: bold;
+  color: $black;
 }
 
 // *** CONTACT PAGE ***
-#section-contact {
+.section-contact {
   background-color: $gold;
 }
 
 #contact-form {
-  margin: 0 20px;
+  margin: 0;
+  @media screen and (min-width: $screen-md-min) {
+    margin: 0 20px;
+  }
 }
 
 #contact-form .form-control {
@@ -236,7 +253,7 @@ table.residents {
   color: red;
   border-radius: 3px;
 }
- 
+
 .success{
   padding: 5px 9px;
   border: 1px solid green;
@@ -245,13 +262,24 @@ table.residents {
 }
 
 #contactDivider {
-  border-left: solid 1px $black;
+  border-left: none;
   margin-bottom: 50px;
+
+  @media screen and (min-width: $screen-md-min) {
+    border-left: solid 1px $black;
+  }
+}
+
+.contact-details {
+  margin-top: 3em;
+  margin-bottom: 3em;
+
+  @media screen and (min-width: $screen-md-min) {
+    margin-top: 0;
+  }
 }
 
 #map {
-  width: 300px;
+  width: 100%;
   height: 300px;
 }
-
-

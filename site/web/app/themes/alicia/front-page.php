@@ -1,5 +1,5 @@
 <!-- SECTION REHEARSE -->
-<div id="section-rehearse" class="container-fluid">
+<div id="section-rehearse">
   <div class="row">
     <div class="col-md-8 col-md-offset-2 text-center">
       <h1>Rehearse</h1>
@@ -7,7 +7,7 @@
   </div>
   <div class="page-content">
     <div class="row">
-      <div class="col-md-8 col-md-offset-2">
+      <div class="col-sm-10 col-sm-offset-1 col-md-8 col-md-offset-2">
         <h4>List equipment</h4>
         <?php echo wpautop( get_theme_mod('equipment_text')) ?> 
         <div class="text-center">
@@ -20,47 +20,24 @@
           <div class="col-xs-12 col-md-8">
             <?php echo wpautop( get_theme_mod('residencies_text')) ?> 
          </div>
-          <div class="col-xs-12 col-sm-8 col-sm-push-2 col-md-4 col-md-push-0">
-            <div class="prices-table one">
-              <div class="table-row">
-                <div class="cell">Sessions PCM</div>
-                <div class="cell">Fee</div>
-              </div>
-              <div class="table-row">
-                <div class="cell">12</div>
-                <div class="cell">£450</div>
-              </div>
-              <div class="table-row">
-                <div class="cell">10</div>
-                <div class="cell">£400</div>
-              </div>
-              <div class="table-row">
-                <div class="cell">8</div>
-                <div class="cell">£340</div>
-              </div>
-              <div class="table-row">
-                <div class="cell">6</div>
-                <div class="cell">£275</div>
-              </div>
-              <div class="table-row">
-                <div class="cell">4</div>
-                <div class="cell">£200</div>
-              </div>
-            </div>    
+        <div class="col-xs-12 col-sm-8 col-sm-push-2 col-md-4 col-md-push-0">
+          <?php 
+            $page = get_page_by_title('prices_table'); 
+            $post = get_post($page->ID); 
+            $content = apply_filters('the_content', $post->post_content); 
+            echo $content;  
+          ?>           
           </div>
         </div>
         <div class="text-center">
           <h3>So to conclude, a Fat Tank Residency gets you:</h3>
         </div>
-        <ul class="residency-list">
-          <li>Personal storage area</li>
-          <li>Keys to studio</li>
-          <li>Parking</li>
-          <li>Access to online calendar</li>
-          <li>Shower room (hose down after a sweaty gig)</li>
-          <li>Kitchen Area - Fully stocked tea / coffee making facilities</li>
-          <li>Whole Lotta Fat Tank Lovin</li>
-        </ul>
+        <?php
+          $page = get_page_by_title('residency_list');
+          $post = get_post($page->ID);
+          $content = apply_filters('the_content', $post->post_content);
+          echo $content;
+        ?>
       </div>
     </div>
   </div>
@@ -78,7 +55,7 @@
 <!--</div> -->
 
 <!-- SECTION RECORD -->
-<div id="section-record" class="container-fluid">
+<div id="section-record">
   <div class="row">
     <div class="col-md-8 col-md-offset-2 text-center">
       <h1>Record</h1>
@@ -86,30 +63,27 @@
   </div>
   <div class="page-content">
     <div class="row">
-      <div class="col-xs-12 col-md-5">
+      <div class="col-xs-12 col-sm-10 col-sm-offset-1 col-md-5 col-md-offset-0">
         <div class="record-img"><img src="<?= get_template_directory_uri(); ?>/dist/images/control_window.jpg" class="img-responsive"></div>
       </div>
-      <div class="col-xs-12 col-md-7">
+      <div class="col-xs-12 col-sm-10 col-sm-offset-1 col-md-7 col-md-offset-0">
         <?php echo wpautop(get_theme_mod('record_text')); ?>
       </div>
     </div>
     <div class="row">
-      <div class="col-md-5">
+      <div class="col-xs-12 col-sm-10 col-sm-offset-1 col-md-5 col-md-offset-0">
         <div class="record-img"><img src="<?= get_template_directory_uri(); ?>/dist/images/control_desk.jpg" class="img-responsive"></div>
       </div>
-      <div class="col-md-7">
+      <div class="col-xs-12 col-sm-10 col-sm-offset-1 col-md-7 col-md-offset-0">
         <div class="text-center">
           <h3>Past Recorded Artist</h3>
         </div>
-        <ul id="RecordedArtistsList">
-          <li>Dooks</li>
-          <li>Francobollo</li>
-          <li>Mohit</li>
-          <li>L.A Salami</li>
-          <li>Lovepark</li>
-          <li>Acrobat</li>
-          <li>Elizabeth</li>
-        </ul>
+        <?php 
+          $page = get_page_by_title('past_recorded_artists'); 
+          $post = get_post($page->ID); 
+          $content = apply_filters('the_content', $post->post_content); 
+          echo $content;  
+        ?>
       </div>
     </div>
     <div class="row">
@@ -123,32 +97,34 @@
 </div>
 
 <!-- SECTION RESIDENTS -->
-<div class="row" id="section-residents">
+<div class="row section-residents">
   <div class="col-md-8 col-md-offset-2 text-center">
     <h1>Residents</h1>
   </div>
+</div>
+<div class="row section-residents">
   <div class="col-md-10 col-md-offset-1">
-    
     <?php echo do_shortcode("[metaslider id=36]"); ?>
-<!--
-  <?php query_posts('cat=4&showposts=3');
+    <!--
+    <?php query_posts('cat=4&showposts=3');
     if (have_posts()) : ?>
     <div id="myCarousel" data-ride="carousel" class="carousel slide">
-      <div role="listbox" class="carousel-inner"> 
-        <?php $count = 0; while (have_posts()): the_post(); ?>
-        <div class="item <? if ($count==0): echo 'active'; endif; $count++;?>">
-          <img src=<?php $image_id = get_post_thumbnail_id(); 
-                        $image_url = wp_get_attachment_image_src($image_id,'full'); 
-                        echo $image_url[0];?> alt="Chania" class="img-circle">
-        </div>
-        <?php endwhile; ?>
+    <div role="listbox" class="carousel-inner"> 
+      <?php $count = 0; while (have_posts()): the_post(); ?>
+      <div class="item <? if ($count==0): echo 'active'; endif; $count++;?>">
+        <img src=<?php $image_id = get_post_thumbnail_id(); 
+                      $image_url = wp_get_attachment_image_src($image_id,'full'); 
+                      echo $image_url[0];?> alt="Chania" class="img-circle">
       </div>
-      <a href="#myCarousel" role="button" data-slide="prev" class="left carousel-control"><span aria-hidden="true" class="fa fa-chevron-left fa-2x"></span><span class="sr-only">Previous</span></a>
-      <a href="#myCarousel" role="button" data-slide="next" class="right carousel-control"><span aria-hidden="true" class="fa fa-chevron-right fa-2x"><span class="sr-only">Next</span></span></a>
-      <h2><?php echo the_title(); ?></h2>
+      <?php endwhile; ?>
+    </div>
+    <a href="#myCarousel" role="button" data-slide="prev" class="left carousel-control"><span aria-hidden="true" class="fa fa-chevron-left fa-2x"></span><span class="sr-only">Previous</span></a>
+    <a href="#myCarousel" role="button" data-slide="next" class="right carousel-control"><span aria-hidden="true" class="fa fa-chevron-right fa-2x"><span class="sr-only">Next</span></span></a>
+    <h2><?php echo the_title(); ?></h2>
     </div>
     <?php endif; wp_reset_postdata(); ?>
--->
+    -->
+    <!--
     <table class="residents">
       <tr>
         <td>band1</td>
@@ -165,21 +141,26 @@
         <td>band6</td>
         <td>band9</td>
       </tr>
-    </table>
+    </table> -->
   </div>
 </div>
 
 
 <!-- SECTION RADIO -->
-<div class="row" id="section-radio">
+<div class="row section-radio">
   <div class="col-md-8 col-md-offset-2 text-center">
     <h1>Radio</h1>
+
+    <p> Watch this space. . . </p>
   </div>
+  <!--<div class="col-sm-10 col-sm-offset-1 col-md-8 col-md-offset-2">
+    <p> Watch this space. . . </p>
+  </div>-->
 </div>
 
 
 <!-- SECTION ABOUT -->
-<div id="section-about" class="container-fluid">
+<div id="section-about">
   <div class="row">
     <div class="col-md-8 col-md-offset-2 text-center">
       <h1>About</h1>
@@ -187,7 +168,7 @@
   </div>
   <div class="page-content">
     <div class="row">
-      <div class="col-md-8 col-md-offset-2">
+      <div class="col-sm-10 col-sm-offset-1 col-md-8 col-md-offset-2">
         <?php echo wpautop( get_theme_mod('about_text')) ?>
       </div>
     </div>
@@ -196,7 +177,9 @@
         <h3>Gallery</h3>
       </div>
       <div class="col-xs-12">
-      <?php echo do_shortcode("[metaslider id=21]"); ?>
+        <div class="gallery">
+          <?php echo do_shortcode("[metaslider id=21]"); ?>
+        </div>
         <!--
         <div id="galleryCarousel" data-ride="carousel" class="carousel slide">
           <div role="listbox" class="carousel-inner">
@@ -218,7 +201,9 @@
         </div>
         <div class="row">
           <div class="col-xs-12 col-sm-6">
-            <div class="team-img"><img src="<?= get_template_directory_uri(); ?>/dist/images/nathan_square.jpg" class="img-circle img-responsive"></div>
+            <div class="team-img">
+              <img src='<?php echo esc_url( get_theme_mod( 'team_one_image' ) ); ?>' class="img-circle img-responsive">
+            </div>
             <div class="team-info">
               <h4>Daisy Dooks</h4>
               <p class="role">Founder / Managing Director / Assistant Engineer</p>
@@ -241,11 +226,13 @@
 </div>
 
 <!-- SECTION CONTACT -->
-<div class="row" id="section-contact">
+<div class="row section-contact">
   <div class="col-md-8 col-md-offset-2 text-center">
     <h1>Contact</h1>
   </div>
-  <div class="col-md-6 col-md-offset-1">
+</div>
+<div class="row section-contact">
+  <div class="col-xs-12 col-sm-10 col-sm-offset-1 col-md-6 col-md-offset-1">
     <?php
  
       //response generation function
@@ -257,7 +244,7 @@
         global $response;
  
         if($type == "success") $response = "<div class='col-sm-10 col-sm-offset-2 contact-success'>{$message}</div>";
-        else $response = "<div class='col-sm-10 col-sm-offset-2 contact-error'>{$message}</div>";
+        else $response = "<div class='col-md-10 col-md-offset-2 contact-error'>{$message}</div>";
  
       }
       
@@ -309,46 +296,48 @@
     ?>
       <form id="contact-form" action="" method="post" class="form-horizontal">
       <div class="form-group">
-      <label for="message_name" class="col-sm-2 control-label">Name:</label>
-        <div class="col-sm-10">
+      <label for="message_name" class="col-md-2 control-label">Name:</label>
+        <div class="col-md-10">
         <input type="text" name="message_name" value="" class="form-control" id="name">
         </div>
       </div>     
       <div class="form-group">
-        <label for="message_email" class="col-sm-2 control-label">Email:</label>
-        <div class="col-sm-10">
+        <label for="message_email" class="col-md-2 control-label">Email:</label>
+        <div class="col-md-10">
           <input type="email" name="message_email" class="form-control" id="email">
         </div>
       </div>
       <div class="form-group">
-        <label for="message_text" class="col-sm-2 control-label">Message:</label>
-        <div class="col-sm-10">
+        <label for="message_text" class="col-md-2 control-label">Message:</label>
+        <div class="col-md-10">
           <textarea id="message" name="message_text" class="form-control" rows="8"></textarea>
         </div>
       </div>
       <div class="form-group">    
-        <label for="message_human" class="col-sm-2 control-label">Human Check:</label>
-        <div class="col-sm-10">
+        <label for="message_human" class="col-md-2 control-label">Human Check:</label>
+        <div class="col-md-10">
           <input type="text" class="form-control" name="message_human"> + 3 = 5</label>
         </div>
       </div>
       <input type="hidden" name="submitted" value="1">
       <div class="form-group">
-        <div class="col-sm-offset-9 col-sm-3">
+        <div class="col-md-offset-9 col-md-3">
           <button type="submit" class="btn btn-default">Send</button>
         </div>
       </div>
     </form>
   </div>
-  <div id="contactDivider"class="col-md-4">
-    <address>
-      Unit 3B <br>
-      167 Hermitage Road <br>
-      Manor House <br>
-      N4 1LZ
-    </address>
-    <p> contact@fattankstudios.co.uk </p>
-    <div id="map"></div>
+  <div id="contactDivider" class="col-xs-12 col-sm-10 col-sm-offset-1 col-md-4 col-md-offset-0">
+    <div class="contact-details">
+      <address>
+        Unit 3B <br>
+        167 Hermitage Road <br>
+        Manor House <br>
+        N4 1LZ
+      </address>
+      <p> <?php echo get_theme_mod('contact_email'); ?> </p>
+    </div>
+      <div id="map"></div>
   </div>
 </div>
 

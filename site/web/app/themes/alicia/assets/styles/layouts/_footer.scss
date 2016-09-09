@@ -56,8 +56,28 @@ footer .social-links {
   text-align: center;
 }
 
-footer i .fa {
-  display: inline-block;
+footer i.fa {
+  padding-top: 0.2em;
+  padding-bottom: 0.2em;
+}
+
+// first icon 
+footer i.fa-facebook {
+  padding-right: 0.1em;
+}
+
+// second icon
+footer i.fa-twitter {
+  padding-left: 0.1em;
+}
+
+footer #mc-embedded-subscribe-form {
+  padding: 5%;
+
+  @media screen and (min-width: $screen-sm-min) {
+    padding-top: 0;
+    padding-bottom: 0;
+  }
 }
 
 footer p {
