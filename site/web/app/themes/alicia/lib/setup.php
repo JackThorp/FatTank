@@ -107,6 +107,12 @@ function assets() {
     wp_enqueue_script('theme_homepage', Assets\asset_path('scripts/homepage.js'), ['jquery'], null, true);
     wp_enqueue_script('theme_map', Assets\asset_path('scripts/map.js'), ['jquery'], null, true);
     wp_enqueue_script('g_maps', 'https://maps.googleapis.com/maps/api/js?key=AIzaSyAVUMFdQ9J0I708VrX_3nMI2rvasgilskQ&callback=initMap', ['theme_map'], null, true);
+
+    // embed the javascript file that makes the AJAX request
+    wp_enqueue_script( 'my-ajax-request', Assets\asset_path('scripts/ajax.js'), ['jquery'], null, true);
+ 
+    // declare the URL to the file that handles the AJAX request (wp-admin/admin-ajax.php)
+    wp_localize_script( 'my-ajax-request', 'MyAjax', array( 'ajaxurl' => admin_url( 'admin-ajax.php')) );
   }
 }
 add_action('wp_enqueue_scripts', __NAMESPACE__ . '\\assets', 100);

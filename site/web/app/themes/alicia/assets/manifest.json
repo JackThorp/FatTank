@@ -16,6 +16,11 @@
         "scripts/map.js"
       ]
     },
+    "ajax.js": {
+      "files": [
+        "scripts/ajax.js"
+      ]
+    },
     "main.css": {
       "files": [
         "styles/main.scss"

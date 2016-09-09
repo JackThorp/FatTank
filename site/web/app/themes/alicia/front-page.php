@@ -97,7 +97,7 @@
 </div>
 
 <!-- SECTION RESIDENTS -->
-<div class="row section-residents">
+<div id="section-residents" class="row section-residents">
   <div class="col-md-8 col-md-offset-2 text-center">
     <h1>Residents</h1>
   </div>
@@ -226,7 +226,7 @@
 </div>
 
 <!-- SECTION CONTACT -->
-<div class="row section-contact">
+<div id="section-contact" class="row section-contact">
   <div class="col-md-8 col-md-offset-2 text-center">
     <h1>Contact</h1>
   </div>
@@ -298,31 +298,31 @@
       <div class="form-group">
       <label for="message_name" class="col-md-2 control-label">Name:</label>
         <div class="col-md-10">
-        <input type="text" name="message_name" value="" class="form-control" id="name">
+        <input type="text" name="message_name" value="" class="form-control" id="message_name">
         </div>
       </div>     
       <div class="form-group">
         <label for="message_email" class="col-md-2 control-label">Email:</label>
         <div class="col-md-10">
-          <input type="email" name="message_email" class="form-control" id="email">
+          <input required type="email" name="message_email" class="form-control" id="message_email">
         </div>
       </div>
       <div class="form-group">
         <label for="message_text" class="col-md-2 control-label">Message:</label>
         <div class="col-md-10">
-          <textarea id="message" name="message_text" class="form-control" rows="8"></textarea>
+          <textarea required id="message_text" name="message_text" class="form-control" rows="8"></textarea>
         </div>
       </div>
       <div class="form-group">    
         <label for="message_human" class="col-md-2 control-label">Human Check:</label>
         <div class="col-md-10">
-          <input type="text" class="form-control" name="message_human"> + 3 = 5</label>
+          <input required type="text" class="form-control" name="message_human" id="message_human"> + 3 = 5</label>
         </div>
       </div>
       <input type="hidden" name="submitted" value="1">
       <div class="form-group">
         <div class="col-md-offset-9 col-md-3">
-          <button type="submit" class="btn btn-default">Send</button>
+          <button id="submit" type="submit" class="btn btn-default">Send</button>
         </div>
       </div>
     </form>
