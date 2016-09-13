@@ -162,19 +162,29 @@ ul.residency-list {
 }
 
 // *** RECORD PAGE ***
-#RecordedArtistsList {
-  list-style-type: none;
+.artist-list {
+  //list-style-type: none;
   font-weight: bold;
-  margin: 0;
+  text-align: center;
+  margin: 1em 0;
   
-  li {
+  .a-item {
     padding-bottom: 0.8em;
+  }
+
+  a {
+    text-decoration: none;
+    color: inherit;
+  }
+
+  a:hover, a:active {
+    color: $orange;
   }
 }
 
 #sc-player {
-  margin-top: 100px;
-  margin-bottom: 100px;
+  margin-top: 3em;
+  margin-bottom: 4em;
 }
 
 // *** RESIDENTS PAGE ***

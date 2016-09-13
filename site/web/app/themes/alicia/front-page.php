@@ -105,43 +105,12 @@
 <div class="row section-residents">
   <div class="col-md-10 col-md-offset-1">
     <?php echo do_shortcode("[metaslider id=36]"); ?>
-    <!--
-    <?php query_posts('cat=4&showposts=3');
-    if (have_posts()) : ?>
-    <div id="myCarousel" data-ride="carousel" class="carousel slide">
-    <div role="listbox" class="carousel-inner"> 
-      <?php $count = 0; while (have_posts()): the_post(); ?>
-      <div class="item <? if ($count==0): echo 'active'; endif; $count++;?>">
-        <img src=<?php $image_id = get_post_thumbnail_id(); 
-                      $image_url = wp_get_attachment_image_src($image_id,'full'); 
-                      echo $image_url[0];?> alt="Chania" class="img-circle">
-      </div>
-      <?php endwhile; ?>
-    </div>
-    <a href="#myCarousel" role="button" data-slide="prev" class="left carousel-control"><span aria-hidden="true" class="fa fa-chevron-left fa-2x"></span><span class="sr-only">Previous</span></a>
-    <a href="#myCarousel" role="button" data-slide="next" class="right carousel-control"><span aria-hidden="true" class="fa fa-chevron-right fa-2x"><span class="sr-only">Next</span></span></a>
-    <h2><?php echo the_title(); ?></h2>
-    </div>
-    <?php endif; wp_reset_postdata(); ?>
-    -->
-    <!--
-    <table class="residents">
-      <tr>
-        <td>band1</td>
-        <td>band4</td>
-        <td>band7</td>
-      </tr>
-      <tr>
-        <td>band2</td>
-        <td>band5</td>
-        <td>band8</td>
-      </tr>
-      <tr>
-        <td>band3</td>
-        <td>band6</td>
-        <td>band9</td>
-      </tr>
-    </table> -->
+    <?php 
+      $page = get_page_by_title('bands_in_residence'); 
+      $post = get_post($page->ID); 
+      $content = apply_filters('the_content', $post->post_content); 
+      echo $content;  
+    ?>   
   </div>
 </div>
 
@@ -205,18 +174,21 @@
               <img src='<?php echo esc_url( get_theme_mod( 'team_one_image' ) ); ?>' class="img-circle img-responsive">
             </div>
             <div class="team-info">
-              <h4>Daisy Dooks</h4>
-              <p class="role">Founder / Managing Director / Assistant Engineer</p>
-              <p>dooks@fattankstudio.co.uk</p>
+            <h4><?php echo get_theme_mod('team_one_name');?></h4>
+            <p class="role"><?= get_theme_mod('team_one_title');?></p>
+            <p><?= get_theme_mod('team_one_email');?></p>
+            <p><?= get_theme_mod('team_one_phone');?></p>
             </div>
           </div>
           <div class="col-xs-12 col-sm-6">
-            <div class="team-img"> <img src="<?= get_template_directory_uri(); ?>/dist/images/nathan_square.jpg" class="img-circle img-responsive"></div>
+            <div class="team-img"> 
+              <img src="<?= esc_url( get_theme_mod('team_two_image')); ?>" class="img-circle img-responsive">
+            </div>
             <div class="team-info">
-              <h4>Nathan Coen</h4>
-              <p class="role">General Manager / G.T.G (Go To Guy) / Recording Engineer</p>
-              <p>contact@fattankstudios.co.uk</p>
-              <p>07845528341</p>
+            <h4><?= get_theme_mod('team_two_name');?></h4>
+            <p class="role"><?= get_theme_mod('team_two_title');?></p>
+            <p><?= get_theme_mod('team_two_email');?></p>
+            <p><?= get_theme_mod('team_two_phone');?></p>
             </div>
           </div>
         </div>

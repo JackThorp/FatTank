@@ -187,6 +187,133 @@ function customize_register($wp_customize) {
     'settings' => 'team_one_image',
   ) ) );
 
+  // Team One Name
+  $wp_customize->add_setting('team_one_name', array(
+    'default'        => '',
+    'type'           => 'theme_mod',
+    'capability'     => 'edit_theme_options',
+  ));
+  
+  $wp_customize->add_control('alicia_team_one_name', array(
+    'label'   => __( 'Team One Name', 'alicia' ),
+    'section' => 'about',
+    'settings'  => 'team_one_name',
+    'type' => 'text',
+  ));
+
+  // Team One Title
+  $wp_customize->add_setting('team_one_title', array(
+    'default'        => '',
+    'type'           => 'theme_mod',
+    'capability'     => 'edit_theme_options',
+  ));
+  
+  $wp_customize->add_control('alicia_team_one_title', array(
+    'label'   => __( 'Team One Title', 'alicia' ),
+    'section' => 'about',
+    'settings'  => 'team_one_title',
+    'type' => 'text',
+  ));
+
+  // Team One Email
+  $wp_customize->add_setting('team_one_email', array(
+    'default'        => '',
+    'type'           => 'theme_mod',
+    'capability'     => 'edit_theme_options',
+  ));
+  
+  $wp_customize->add_control('alicia_team_one_email', array(
+    'label'   => __( 'Team One Email', 'alicia' ),
+    'section' => 'about',
+    'settings'  => 'team_one_email',
+    'type' => 'text',
+  ));
+
+  // Team One Phone Number
+  $wp_customize->add_setting('team_one_phone', array(
+    'default'        => '',
+    'type'           => 'theme_mod',
+    'capability'     => 'edit_theme_options',
+  ));
+  
+  $wp_customize->add_control('alicia_team_one_phone', array(
+    'label'   => __( 'Team One Phone', 'alicia' ),
+    'section' => 'about',
+    'settings'  => 'team_one_phone',
+    'type' => 'text',
+  ));
+
+  // Team Two Image
+  $wp_customize->add_setting('team_two_image', array(
+    'default'        => '',
+    'type'           => 'theme_mod',
+    'capability'     => 'edit_theme_options',
+  ));
+
+  $wp_customize->add_control( new \WP_Customize_Image_Control( $wp_customize, 'team_two_image', array(
+    'label'    => __( 'Team Two Image', 'alicia' ),
+    'section'  => 'about',
+    'settings' => 'team_two_image',
+  ) ) );
+
+
+  // Team Two Name
+  $wp_customize->add_setting('team_two_name', array(
+    'default'        => '',
+    'type'           => 'theme_mod',
+    'capability'     => 'edit_theme_options',
+  ));
+  
+  $wp_customize->add_control('alicia_team_two_name', array(
+    'label'   => __( 'Team Two Name', 'alicia' ),
+    'section' => 'about',
+    'settings'  => 'team_two_name',
+    'type' => 'text',
+  ));
+
+  // Team Two Title
+  $wp_customize->add_setting('team_two_title', array(
+    'default'        => '',
+    'type'           => 'theme_mod',
+    'capability'     => 'edit_theme_options',
+  ));
+  
+  $wp_customize->add_control('alicia_team_two_title', array(
+    'label'   => __( 'Team Two Title', 'alicia' ),
+    'section' => 'about',
+    'settings'  => 'team_two_title',
+    'type' => 'text',
+  ));
+
+  // Team Two Email
+  $wp_customize->add_setting('team_two_email', array(
+    'default'        => '',
+    'type'           => 'theme_mod',
+    'capability'     => 'edit_theme_options',
+  ));
+  
+  $wp_customize->add_control('alicia_team_two_email', array(
+    'label'   => __( 'Team Two Email', 'alicia' ),
+    'section' => 'about',
+    'settings'  => 'team_two_email',
+    'type' => 'text',
+  ));
+
+  // Team Two Phone Number
+  $wp_customize->add_setting('team_two_phone', array(
+    'default'        => '',
+    'type'           => 'theme_mod',
+    'capability'     => 'edit_theme_options',
+  ));
+
+  $wp_customize->add_control('alicia_team_two_phone', array(
+    'label'   => __( 'Team Two Phone', 'alicia' ),
+    'section' => 'about',
+    'settings'  => 'team_two_phone',
+    'type' => 'text',
+  ));
+
+ 
 }
 add_action('customize_register', __NAMESPACE__ . '\\customize_register');
 

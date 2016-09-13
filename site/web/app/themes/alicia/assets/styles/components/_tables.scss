@@ -32,3 +32,15 @@
   display:table-cell;
   border:1px solid #fff;
 }
+
+table.residents {
+  font-family: NewsGothicOblique;
+  font-weight: 900;
+  width: 100%;
+  table-layout: fixed;
+  margin: 2em 0;
+}
+
+table.residents td {
+  padding: 0.2em 0;
+}
