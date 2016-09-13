@@ -17,20 +17,23 @@
         <ul class="footer-links">
           <li><a href="#section-about">About</a></li>
           <li><a href="#section-contact">Contact</a></li>
+          <!-- Invisible links maintains layout -->
           <li class="invis-li">bla </li>
           <li class="invis-li">bla </li>
-          <li class="invis-li">bla    </li>
+          <li class="invis-li">bla </li>
         </ul>
       </div>
       <div class="col-xs-12 col-sm-2 col-sm-push-3">
-        <h2>Follow us</h2>
-        <div class="social-links">
-          <a href="<?php echo get_theme_mod('facebook_address'); ?>" target="_blank">
-            <i aria-hidden="true" class="fa fa-facebook fa-3x"></i>
-          </a>
-          <a href="<?php echo get_theme_mod('twitter_address'); ?>" target="_blank">
-            <i aria-hidden="true" class="fa fa-twitter fa-3x"></i>
-          </a>
+        <div class="footer-social-links">
+          <h2>Follow us</h2>
+          <div class="social-links">
+            <a href="<?php echo get_theme_mod('facebook_address'); ?>" target="_blank">
+              <i aria-hidden="true" class="fa fa-facebook fa-3x"></i>
+            </a>
+            <a href="<?php echo get_theme_mod('twitter_address'); ?>" target="_blank">
+              <i aria-hidden="true" class="fa fa-twitter fa-3x"></i>
+            </a>
+          </div>
         </div>
       </div>
       <div class="col-xs-12 col-sm-3 col-sm-push-3">

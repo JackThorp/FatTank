@@ -35,14 +35,33 @@ footer li {
   font-family: NewsGothicOblique; 
 }
 
-footer li a {
+footer li a:link {
   display: table-cell;
   color: $white;
   vertical-align: middle;
+  text-decoration: none;
+}
+// Order is important here
+footer li a:visited {
+  color: $white;
+  text-decoration: none;
+}
+footer li a:hover, a:active {
+  color: $orange;
+  text-decoration: none;
 }
 
 .invis-li {
   visibility: hidden;
+}
+
+footer .footer-social-links {
+
+  margin: 1em 0;
+
+  @media screen and (min-width: $screen-sm-min) {
+    margin: 0;
+  }
 }
 
 footer h2 {
@@ -73,11 +92,20 @@ footer i.fa-twitter {
 
 footer #mc-embedded-subscribe-form {
   padding: 5%;
+  margin: 1em 0;
 
   @media screen and (min-width: $screen-sm-min) {
     padding-top: 0;
     padding-bottom: 0;
+    margin: 0;
   }
+}
+
+footer #mc-embedded-subscribe-form label {
+  // Should create a mixin for this combination
+  font-family: GillSansNovaLight;
+  font-weight: normal;
+  letter-spacing: 0.1em;
 }
 
 footer p {
