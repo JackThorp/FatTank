@@ -229,6 +229,10 @@ table.residents {
   background-color: $gold;
 }
 
+.hidden {
+  display: none;
+}
+
 #contact-form {
   margin: 0;
   @media screen and (min-width: $screen-md-min) {

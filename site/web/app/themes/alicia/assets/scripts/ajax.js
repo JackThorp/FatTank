@@ -14,7 +14,11 @@ jQuery(document).ready(function(){
       message_human: jQuery('#message_human').val(),
     },
     function( response ) {
-       alert( response );
+      // Hide contact form and display response.
+      jQuery('#contact-form').addClass("hidden");
+      var resDiv = jQuery('#contact-form-response');
+      resDiv.removeClass('hidden')
+      resDiv.append('<h4>' + response + '</h4>');
     });
   } 
 });
