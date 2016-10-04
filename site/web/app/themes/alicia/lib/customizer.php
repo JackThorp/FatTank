@@ -155,13 +155,32 @@ function customize_register($wp_customize) {
     'label'    => __( 'Soundcloud Embed Link' ),
     'section'  => 'record',
   ));
+
+  // RESIDENTS SECTION
+  $wp_customize->add_section('residents', array(
+    'title' => __('Residents', 'Alicia'),
+    'priority' => 5,
+  ));
   
+  $wp_customize->add_setting('residents_gallery_shortcode', array(
+    'default'     => '',
+    'type'        => 'theme_mod',
+    'capability'  => 'edit_theme_options',
+  ));
+  
+  $wp_customize->add_control('alicia_residents_gallery_shortcode', array(
+    'label'     => __('Residents Gallery Shortcode', 'alicia'),
+    'section'   => 'residents',
+    'settings'  => 'residents_gallery_shortcode',
+    'type'      => 'text',
+  ));
+
   // ABOUT SECTION
   $wp_customize->add_section('about', array(
     'title' => __('About', 'Alicia'),
-    'priority' => 5,
+    'priority' => 6,
   ));
-
+ 
   $wp_customize->add_setting('about_text', array(
     'default'        => '',
     'type'           => 'theme_mod',
@@ -173,6 +192,19 @@ function customize_register($wp_customize) {
     'section' => 'about',
     'settings'  => 'about_text',
     'type' => 'textarea',
+  ));
+ 
+  $wp_customize->add_setting('studio_gallery_shortcode', array(
+    'default'     => '',
+    'type'        => 'theme_mod',
+    'capability'  => 'edit_theme_options',
+  ));
+  
+  $wp_customize->add_control('alicia_studio_gallery_shortcode', array(
+    'label'     => __('Studio Gallery Shortcode', 'alicia'),
+    'section'   => 'about',
+    'settings'  => 'studio_gallery_shortcode',
+    'type'      => 'text',
   ));
 
   $wp_customize->add_setting('team_one_image', array(

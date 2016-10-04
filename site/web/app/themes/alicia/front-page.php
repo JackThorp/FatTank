@@ -104,7 +104,7 @@
 </div>
 <div class="row section-residents">
   <div class="col-md-10 col-md-offset-1">
-    <?php echo do_shortcode("[metaslider id=36]"); ?>
+    <?php echo do_shortcode(get_theme_mod("residents_gallery_shortcode")); ?>
     <?php 
       $page = get_page_by_title('bands_in_residence'); 
       $post = get_post($page->ID); 
@@ -147,7 +147,7 @@
       </div>
       <div class="col-xs-12">
         <div class="gallery">
-          <?php echo do_shortcode("[metaslider id=21]"); ?>
+          <?php echo do_shortcode(get_theme_mod("studio_gallery_shortcode"));?>
         </div>
         <!--
         <div id="galleryCarousel" data-ride="carousel" class="carousel slide">
