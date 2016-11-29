@@ -8,7 +8,7 @@
   <div class="page-content">
     <div class="row">
       <div class="col-sm-10 col-sm-offset-1 col-md-8 col-md-offset-2">
-        <h4>List equipment</h4>
+        <h4>Equipment</h4>
         <?php echo wpautop( get_theme_mod('equipment_text')) ?> 
         <div class="text-center">
           <h3> Fat Tank offers one-off slots and residency packages: </h3>
@@ -68,6 +68,12 @@
       </div>
       <div class="col-xs-12 col-sm-10 col-sm-offset-1 col-md-7 col-md-offset-0">
         <?php echo wpautop(get_theme_mod('record_text')); ?>
+        <?php 
+          $page = get_page_by_title('tech_spec'); 
+          $post = get_post($page->ID); 
+          $content = apply_filters('the_content', $post->post_content); 
+          echo $content;  
+        ?>
       </div>
     </div>
     <div class="row">
