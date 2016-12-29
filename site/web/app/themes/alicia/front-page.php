@@ -78,7 +78,7 @@
     </div>
     <div class="row">
       <div class="col-xs-12 col-sm-10 col-sm-offset-1 col-md-5 col-md-offset-0">
-        <div class="record-img"><img src="<?= get_template_directory_uri(); ?>/dist/images/control_desk.jpg" class="img-responsive"></div>
+        <div class="record-img"><img src="<?= get_template_directory_uri(); ?>/dist/images/control_desk_new.jpg" class="img-responsive"></div>
       </div>
       <div class="col-xs-12 col-sm-10 col-sm-offset-1 col-md-7 col-md-offset-0">
         <div class="text-center">
@@ -249,12 +249,15 @@
   <div id="contactDivider" class="col-xs-12 col-sm-10 col-sm-offset-1 col-md-4 col-md-offset-0">
     <div class="contact-details">
       <address>
-        Unit 3B <br>
+        Unit 3B, Omega Works <br>
         167 Hermitage Road <br>
         Manor House <br>
         N4 1LZ
       </address>
-      <p> <?php echo get_theme_mod('contact_email'); ?> </p>
+      <p> 
+        <?php echo get_theme_mod('contact_email'); ?> <br>
+        <?php echo get_theme_mod('contact_number'); ?> 
+      </p>
     </div>
       <div id="map"></div>
   </div>
