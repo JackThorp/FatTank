@@ -106,7 +106,7 @@ function assets() {
   if (is_front_page()) {
     wp_enqueue_script('theme_homepage', Assets\asset_path('scripts/homepage.js'), ['jquery'], null, true);
     wp_enqueue_script('theme_map', Assets\asset_path('scripts/map.js'), ['jquery'], null, true);
-    wp_enqueue_script('g_maps', 'https://maps.googleapis.com/maps/api/js?key=AIzaSyAVUMFdQ9J0I708VrX_3nMI2rvasgilskQ&callback=initMap', ['theme_map'], null, true);
+    wp_enqueue_script('g_maps', 'https://maps.googleapis.com/maps/api/js?key=AIzaSyDcM7ct7YhAlZ1eUmt4BzkqQDrD8DGLE0s&callback=initMap', ['theme_map'], null, true);
 
     // embed the javascript file that makes the AJAX request
     wp_enqueue_script( 'my-ajax-request', Assets\asset_path('scripts/ajax.js'), ['jquery'], null, true);
